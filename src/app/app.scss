@@ -1,0 +1,268 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ion-app.md [padding] .scroll-content,ion-app.ios [padding] .scroll-content  {
+    padding: 10px 0;
+    background: #f1f1f1;
+}
+.card-md,.card-ios{
+	box-shadow: none;
+	background: #fff;
+}
+
+.tabs-md .tab-button-text,.tabs-ios .tab-button-text {
+    font-size: 10px;
+    font-weight: 500;
+}
+.tabs-md .tab-button,.tabs-ios .tab-button {
+    color: #9E9E9E;
+    font-weight: 300;
+}
+.tabs-md .tabbar,.tabs-ios .tabbar {
+    background: #ffffff;
+    border-top: 1px solid #e6e6e6;
+    height: 45px;
+}
+.tabbar.show-tabbar::before{
+	display: none;
+}
+.tabs-md .tab-button-icon,.tabs-ios .tab-button-icon {
+    font-size: 16px;
+    opacity: 0.5;
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon,.tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+    color: #3a3737;
+    opacity: 1 !important;
+}
+.tabs-md .tab-button[aria-selected=true] .tab-button-text,.tabs-ios .tab-button[aria-selected=true] .tab-button-text{
+    color: #3a3737;
+    font-weight: 500;
+    transform: none;
+}
+.tabs-ios .tab-button-icon {
+    margin-top: 0px;
+}
+.tabs-ios .tab-button-text {
+    margin-top: -10px;
+}
+
+ion-tabs .ion-md-game-controller-b,ion-tabs .ion-ios-game-controller-b {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-image: url('../assets/imgs/169717f79c.png');
+  opacity: 0.3 !important;
+}
+ion-tabs .ion-md-game-controller-b:before,ion-tabs .ion-ios-game-controller-b:before {
+    content: "";
+}
+ion-tabs .ion-md-folder,ion-tabs .ion-ios-folder {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-image: url('../assets/imgs/wallet-tab.png');
+  opacity: 0.3 !important;
+}
+ion-tabs .ion-md-folder:before,ion-tabs .ion-ios-folder:before {
+    content: "";
+}
+
+ion-tabs .ion-md-stats,ion-tabs .ion-ios-stats {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-image: url('../assets/imgs/market-tab.png');
+  opacity: 0.3 !important;
+}
+ion-tabs .ion-md-stats:before,ion-tabs .ion-ios-stats:before {
+    content: "";
+}
+ion-tabs .ion-md-globe,ion-tabs .ion-ios-globe {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-image: url('../assets/imgs/payment-tab.png');
+  opacity: 0.3 !important;
+}
+ion-tabs .ion-md-globe:before,ion-tabs .ion-ios-globe:before {
+    content: "";
+}
+ion-tabs .ion-md-contact,ion-tabs .ion-md-contact {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-image: url('../assets/imgs/profile-tab.png');
+  opacity: 0.3 !important;
+} 
+ion-tabs .ion-md-contact:before,ion-tabs .ion-md-contact:before {
+    content: "";
+}
+.scroll-content{
+    margin-bottom: 45px;
+}
+.toolbar-md,.toolbar-ios{
+    min-height: 45px;
+}
+.data_history{
+    width: 100%;
+    
+    color: #353434;
+    font-size: 13px;
+}
+.action-sheet-md .action-sheet-group:first-child,.action-sheet-ios .action-sheet-group:first-child{
+    overflow: hidden;
+    padding-top: 0px;
+}
+.select-customer .action-sheet-title,.select-customer .action-sheet-group-cancel{
+    display: none;
+}
+.select-customer .action-sheet-button{
+    text-align: center;
+    border-bottom:  1px solid #847f7f;
+    
+}
+.select-customer .action-sheet-group .button-inner{
+    justify-content: center;
+}
+.back-button.show-back-button{
+    display: none !important;
+}
+
+.error_form  .toast-wrapper,.success_form .toast-wrapper{
+    bottom: 60px !important;
+    width: 80%;
+    text-align: center;
+    background: #28353c;
+    border-radius: 5px;
+}
+.success_form .toast-wrapper{
+    background: #4CAF50;
+}
+.error_form .toast-message,.success_form .toast-message{
+    font-size: 13px;
+    color: #fff;
+    padding: 10px;
+    
+}
+.alert-md .alert-title,.alert-ios .alert-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFEB3B;
+}
+.alert-md .alert-message,.alert-ios .alert-message{
+    font-size: 13px;
+    color: #000;
+}
+.alert-md .alert-button-group{
+    padding: 0px;
+}
+
+.alert-ios .alert-title {
+   
+    margin-bottom: 12px;
+}
+.alert-md .alert-wrapper,.alert-ios .alert-wrapper{
+    border-radius: 10px;
+}
+.alert-wrapper .alert-head {
+    border-radius: 10px 10px 0 0;
+    background: #11214d;
+}
+.alert-message {
+    margin-top: 15px !important;
+    overflow: hidden !important;
+    border-bottom: 1px solid #eee;
+    color: #000;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 490;
+}
+.alert-ios .alert-message:empty{
+    padding: 0px;
+}
+.alert-md .alert-button{
+    margin: 0px;
+    width: 50%;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px;
+}
+.alert-md .alert-button .button-inner{
+    text-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.alert-wrapper .alert-head .alert-title{
+    text-align: center;
+}
+.alert-md .alert-button:first-child{
+    border-right: 1px solid #e0e0e0;
+}
+.loading-md .loading-wrapper{
+    border-radius: 10px;
+}
+.loading-md .loading-spinner + .loading-content {
+    margin-left: 16px;
+    font-weight: bold;
+    color: #292929;
+}
+ion-refresher{
+    top: 40% !important;
+    z-index: 9999999;
+}
+.scroll-content{
+    transform: translateY(0px) translateZ(0px) !important;
+}
+ion-spinner {
+    background: white;
+    border-radius: 50%;
+    padding: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 1px 0 #eee;
+}
+.refresher-refreshing .spinner-ios line, .refresher-refreshing .spinner-ios-small line, .refresher-refreshing .spinner-crescent circle {
+    stroke: #4CAF50;
+}
+
+.loading-wrapper ion-spinner{
+    border:none;
+    box-shadow: none;
+    background: none;
+}
+
+.toolbar-content .left_heder.button-ios,.toolbar-content .right_heder.button-ios{
+    border-radius: 4px;
+    height: 75px;
+}
+
+.action-sheet-ios .action-sheet-button,.action-sheet-md .action-sheet-button{
+    padding: 12px;
+    min-height: 25px;
+}
+.toolbar-ios ion-title{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+ion-navbar .toolbar-title{
+    font-size: 14px !important;
+}
+.prompt_alert_customer.customs .alert-message {
+    
+    overflow-y: scroll !important;
+}

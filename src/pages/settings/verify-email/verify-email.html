@@ -1,0 +1,66 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Verify Email Address</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contents">
+	
+	<ion-card class="contend_send" *ngIf="status_step1">
+	    <ion-row>
+          <ion-col style="position: relative;">
+            <label>Your Email Address</label>
+            <ion-item>
+                
+                <ion-input class="input"  placeholder="Original Password" name="text" type="text" [(ngModel)]="infomation.email" readonly="true"></ion-input>
+              </ion-item>
+              
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="button_customer">
+          <ion-col>
+              <button (click)="SendCodeVerifyEmail()" ion-button full type="submit" block>Send Code</button>
+          </ion-col>
+      </ion-row>
+	</ion-card>
+	
+
+  <ion-card class="contend_code" *ngIf="status_step2">
+    <form  (ngSubmit)="SubmitForm_Verify()" class="step_2">
+      <ion-row  >
+        <ion-col>
+          
+            
+            
+        <p>Enter the 6-digit verification code send to your email address</p>
+        <div class="">
+          <ion-input maxlength="1" #passcode1 (keyup)="onKeyUp($event,1)"  class="input_code" [(ngModel)]="form.passcode1" name="code1"   type="number" required></ion-input>
+          <ion-input #passcode2 maxlength="1" (keyup)="onKeyUp($event,2)" class="input_code" [(ngModel)]="form.passcode2" name="code2" type="number"  required></ion-input>
+          <ion-input maxlength="1" #passcode3 (keyup)="onKeyUp($event,3)" class="input_code" [(ngModel)]="form.passcode3" name="code3" type="number"  required></ion-input>
+          <ion-input maxlength="1" #passcode4 (keyup)="onKeyUp($event,4)" class="input_code"  [(ngModel)]="form.passcode4" name="code4" type="number" required></ion-input>
+          <ion-input maxlength="1" #passcode5 (keyup)="onKeyUp($event,5)" class="input_code"  [(ngModel)]="form.passcode5" name="code5" type="number" required></ion-input>
+          <ion-input maxlength="1" #passcode6 (keyup)="onKeyUp($event,6)" class="input_code" [(ngModel)]="form.passcode6" name="code6" type="number" required></ion-input>
+        </div>
+      </ion-col>
+    </ion-row>             
+    <ion-row >   
+      <ion-col>
+        <button class="button" ion-button full type="submit" block>Verify Email</button>
+      </ion-col>
+    </ion-row>
+              
+            
+         
+     
+    </form>
+  </ion-card>
+</ion-content>

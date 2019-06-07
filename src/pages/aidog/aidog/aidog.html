@@ -1,0 +1,129 @@
+
+<ion-header>
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Smart Ai-Bald Eagle</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_ai">
+	<ion-list>
+	  	<ion-item >
+		    <ion-row>
+       			<ion-col col-3 class="left">
+       				<img  src="assets/imgs/cryptocurrency/64x64/Bitcoin.png"  />
+       				BTC
+       			</ion-col>
+       			<ion-col col-7 text-center class="center">
+                  		<span class="active" (click)="AddInvestment('BTC')" *ngIf="status_active.BTC == 'active'"> Already opened</span>
+       			     <span class="" *ngIf="status_active.BTC == 'none'"> Unopened</span>
+       			</ion-col>
+       			<ion-col col-2 class="right">
+       				<img *ngIf="status.BTC == 'on'" (click)="DisableInvestment('BTC')" src="assets/imgs/on.png"  />
+       				<img *ngIf="status.BTC == 'off'" (click)="ActiveInvestment('BTC')" src="assets/imgs/off.png"  />
+       			</ion-col>
+       		</ion-row>
+	  	</ion-item>
+	  	<ion-item >
+		    <ion-row>
+       			<ion-col col-3 class="left">
+       				<img  src="assets/imgs/cryptocurrency/64x64/Ethereum.png"  />
+       				ETH
+       			</ion-col>
+       			<ion-col col-7 text-center class="center ">
+       			<span class="active" (click)="AddInvestment('ETH')" *ngIf="status_active.ETH == 'active'"> Already opened</span>
+       			     <span class="" *ngIf="status_active.ETH == 'none'"> Unopened</span>
+       			</ion-col>
+       			<ion-col col-2 class="right">
+       				<img *ngIf="status.ETH == 'on'" (click)="DisableInvestment('ETH')" src="assets/imgs/on.png"  />
+       				<img *ngIf="status.ETH == 'off'" (click)="ActiveInvestment('ETH')" src="assets/imgs/off.png"  />
+       			</ion-col>
+       		</ion-row>
+	  	</ion-item>
+	  	<ion-item >
+		    <ion-row>
+       			<ion-col col-3 class="left">
+       				<img  src="assets/imgs/cryptocurrency/64x64/Ripple.png"  />
+       				XRP
+       			</ion-col>
+       			<ion-col col-7 text-center class="center ">
+       			<span class="active" (click)="AddInvestment('XRP')" *ngIf="status_active.XRP == 'active'"> Already opened</span>
+       			     <span class="" *ngIf="status_active.XRP == 'none'"> Unopened</span>
+       			</ion-col>
+       			<ion-col col-2 class="right">
+       				<img *ngIf="status.XRP == 'on'" (click)="DisableInvestment('XRP')" src="assets/imgs/on.png"  />
+       				<img *ngIf="status.XRP == 'off'" (click)="ActiveInvestment('XRP')" src="assets/imgs/off.png"  />
+       			</ion-col>
+       		</ion-row>
+	  	</ion-item>
+	  	<ion-item >
+		    <ion-row>
+       			<ion-col col-3 class="left">
+       				<img  src="assets/imgs/cryptocurrency/64x64/Litecoin.png"  />
+       				LTC
+       			</ion-col>
+       			<ion-col col-7 text-center class="center ">
+       			<span class="active" (click)="AddInvestment('LTC')" *ngIf="status_active.LTC == 'active'"> Already opened</span>
+       			     <span class="" *ngIf="status_active.LTC == 'none'"> Unopened</span>
+       			</ion-col>
+       			<ion-col col-2 class="right">
+       				<img *ngIf="status.LTC == 'on'" (click)="DisableInvestment('LTC')" src="assets/imgs/on.png"  />
+       				<img *ngIf="status.LTC == 'off'" (click)="ActiveInvestment('LTC')" src="assets/imgs/off.png"  />
+       			</ion-col>
+       		</ion-row>
+	  	</ion-item>
+	  	<ion-item >
+		    <ion-row>
+       			<ion-col col-3 class="left">
+       				<img  src="assets/imgs/cryptocurrency/64x64/Tether.png"  />
+       				USDT
+       			</ion-col>
+       			<ion-col col-7 text-center class="center ">
+       			<span class="active" (click)="AddInvestment('USDT')" *ngIf="status_active.USDT == 'active'"> Already opened</span>
+       			     <span class="" *ngIf="status_active.USDT == 'none'"> Unopened</span>
+       			</ion-col>
+       			<ion-col col-2 class="right">
+       				<img *ngIf="status.USDT == 'on'" (click)="DisableInvestment('USDT')" src="assets/imgs/on.png"  />
+       				<img *ngIf="status.USDT == 'off'" (click)="ActiveInvestment('USDT')" src="assets/imgs/off.png"  />
+       			</ion-col>
+       		</ion-row>
+	  	</ion-item>
+	  	<ion-item >
+		    <ion-row>
+       			<ion-col col-3 class="left">
+       				<img  src="assets/imgs/cryptocurrency/64x64/Dash.png"  />
+       				DASH
+       			</ion-col>
+       			<ion-col col-7 text-center class="center ">
+       			<span class="active" (click)="AddInvestment('DASH')" *ngIf="status_active.DASH == 'active'"> Already opened</span>
+       			     <span class="" *ngIf="status_active.DASH == 'none'"> Unopened</span>
+       			</ion-col>
+       			<ion-col col-2 class="right">
+       				<img *ngIf="status.DASH == 'on'" (click)="DisableInvestment('DASH')" src="assets/imgs/on.png"  />
+       				<img *ngIf="status.DASH == 'off'" (click)="ActiveInvestment('DASH')" src="assets/imgs/off.png"  />
+       			</ion-col>
+       		</ion-row>
+	  	</ion-item>
+	  	<ion-item >
+		    <ion-row>
+       			<ion-col col-3 class="left">
+       				<img  src="assets/imgs/cryptocurrency/64x64/EOS.png"  />
+       				EOS
+       			</ion-col>
+       			<ion-col col-7 text-center class="center ">
+       			<span class="active" (click)="AddInvestment('EOS')" *ngIf="status_active.EOS == 'active'"> Already opened</span>
+       			     <span class="" *ngIf="status_active.EOS == 'none'"> Unopened</span>
+       			</ion-col>
+       			<ion-col col-2 class="right">
+       				<img *ngIf="status.EOS == 'on'" (click)="DisableInvestment('EOS')" src="assets/imgs/on.png"  />
+       				<img *ngIf="status.EOS == 'off'" (click)="ActiveInvestment('EOS')" src="assets/imgs/off.png"  />
+       			</ion-col>
+       		</ion-row>
+	  	</ion-item>
+  	</ion-list>
+</ion-content>

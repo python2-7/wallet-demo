@@ -1,0 +1,161 @@
+page-deposit {
+	.toolbar-background{
+	    background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute; 
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	
+	.scroll-content{
+		background: #f7f7f7 !important;
+		margin-bottom: 0px !important;
+		padding-top: 40px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+
+	}
+
+	.content_deposit .chart{
+		width: 220px;
+		margin: 20px auto;
+		margin-bottom: 0px;
+	}
+	.content_deposit p{
+		font-size: 12px;
+		margin: 0;
+		color: #040404;
+		
+	}
+	.content_deposit button{
+		background: #000 !important;
+		text-transform: capitalize !important;
+		margin-top: 20px !important;
+		padding: 5px 80px !important;
+		border-radius: 5px  !important;
+		width: 80%;
+		margin: 0 auto;
+	    margin-top: 0px !important;
+	    height: 35px;
+    	font-size: 12px;
+    	line-height: 35px;
+    	
+		
+		margin-top: 20px !important;
+		padding: 5px 80px !important;
+		border-radius: 15px;
+	}
+
+	.content_deposit .background{
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+	    left: 0;
+	}
+	.top_deposit {
+		margin-top: 20px;
+	    background: #fff;
+	    padding: 15px;
+	}
+	.top_deposit p{
+	    font-size: 12px;
+	    margin: 0;
+	    color: #585656;
+	    text-align: left;
+	    
+	    margin-bottom: 10px;
+	}
+	.top_deposit p.address{
+	    font-size: 13px;
+		color: #2b2a2a;
+		margin-bottom: 0px;
+	}
+	.content_deposit_bottom{
+		background: #fff;
+		padding: 15px;
+		border-top: 1px solid #eee;
+	}
+	.content_deposit_bottom p{
+		text-align: center;
+		color: #FF9800;
+	}
+	.content_deposit_bottom ion-icon{
+		font-size: 25px;
+	    color: #FF9800;
+	    margin-bottom: 5px;
+	}
+	.content_deposit_bottom .left{
+		border-right: 1px solid #eee;
+	}
+}
+
+.prompt_alert_customer.deposit_address .alert-wrapper .alert-head {
+    background: #ffffff;
+    padding-top: 25px;
+}
+.prompt_alert_customer.deposit_address .alert-wrapper .alert-head .alert-title{
+   	font-size: 14px;
+    color: #424242;
+}
+.prompt_alert_customer.deposit_address .alert-message {
+   	max-height: 260px !important;
+    background: #fff;
+}
+.prompt_alert_customer.deposit_address .alert-message img{
+	margin-top: -10px;
+}
+.prompt_alert_customer.deposit_address .alert-button-group {
+    
+    background: #ffffff;
+    padding: 0 24px 5px 24px;
+}
+.prompt_alert_customer.deposit_address .alert-button:last-child {
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #FF9800;
+    border-radius: 0;
+    width: 80%;
+    margin: 0 auto;
+    color: #FF9800;
+    font-size: 14px;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+.prompt_alert_customer.deposit_address .alert-button:first-child {
+    border-right: none;
+    background: #FF9800;
+    color: #ffffff;
+    width: 80%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+.prompt_alert_customer.deposit_address .address{
+    margin-top: -10px;
+    color: #272525;
+    font-size: 13px;
+    padding: 0 20px;
+}
+

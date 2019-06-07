@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Notification</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_settings">
+	
+	<ion-card class="">
+	   <ion-grid>
+			<ion-row>
+				<ion-col col-12 [innerHTML]="history.content">
+					
+				</ion-col>
+			</ion-row>
+			
+		</ion-grid>
+	</ion-card>
+	
+</ion-content>

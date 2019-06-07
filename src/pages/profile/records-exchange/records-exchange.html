@@ -1,0 +1,90 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Records of Exchange</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="exchange_record">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-card>
+	    <ion-card-content class="history">
+	    	<ion-row class="search">
+	    		<ion-col col-1 text-center>
+	    		</ion-col>
+	          	<ion-col col-4 text-center>
+	          		<ion-select [(ngModel)]="form.from_currency" [selectOptions]="selectOptions"   class="from_currency" (ionChange)="onChangeSelect($event)" interface="action-sheet" name="currency" >
+				      
+				      <ion-option value="BTC" selected="true">BTC</ion-option>
+				      <ion-option value="ETH">ETH</ion-option>
+				      <ion-option value="LTC" >LTC</ion-option>
+					  <ion-option value="DASH" >DASH</ion-option>  
+					  <!-- <ion-option value="EOS" >EOS</ion-option>   -->
+					  <ion-option value="XRP" >XRP</ion-option>  
+					  <ion-option value="USDT" >USDT</ion-option>  
+				    </ion-select>
+	          	</ion-col>
+	          	<ion-col col-2 text-center class="exchange">
+	          		<img  src="assets/imgs/exchange.png" />
+	          	</ion-col>
+	          	<ion-col col-4 text-center>
+	          		<ion-select [(ngModel)]="form.to_currency" [selectOptions]="selectOptions"   class="to_currency" (ionChange)="onChangeSelect($event)" interface="action-sheet" name="currency" >
+				      
+				      <ion-option value="BTC" selected="true">BTC</ion-option>
+				      <ion-option value="ETH"  >ETH</ion-option>
+				      <ion-option value="LTC" >LTC</ion-option>
+					  <ion-option value="DASH" >DASH</ion-option>  
+					  <!-- <ion-option value="EOS" >EOS</ion-option>   -->
+					  <ion-option value="XRP" >XRP</ion-option>  
+					  <ion-option value="USDT" >USDT</ion-option>  
+				    </ion-select>	
+	          	</ion-col>
+	          	<ion-col col-1 text-center>
+	    		</ion-col>
+	          	
+	        </ion-row>
+	    	<ion-grid *ngFor="let item of history" style="border-bottom: 1px solid #eee;" >
+		      	<ion-row class="date">
+		        	
+		          	<ion-col col-12 text-center>
+		          		<span class="date_added" >{{item.date_added}}</span>	
+		          		
+		          	</ion-col>
+		          	
+		        </ion-row>
+		      	<ion-row >
+		          	<ion-col col-5 >
+		          		<div float-right class="form">
+		          			<img float-right class="currency_from" src="assets/imgs/cryptocurrency/{{item.currency_from}}.png" /> {{item.amount_form}}	
+		          		</div>
+		          	</ion-col>
+		          	<ion-col col-2 class="exchange">
+		          		<img src="assets/imgs/exchange.png" />
+		          	</ion-col>
+		          	<ion-col col-5 class="to">
+		          		<div float-left class="to">
+		          			<img float-left class="currency_to" src="assets/imgs/cryptocurrency/{{item.currency_to}}.png" /> {{item.amount_to}}
+		          		</div>
+		          	</ion-col>
+		        </ion-row>
+		       
+		        
+		       
+			</ion-grid>
+			<p text-center margin-top *ngIf="count_history == 0 || history_load_no == true">No data</p>
+	    	
+	    </ion-card-content>
+	</ion-card>
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="count_history > 0 && history_load_no == false">
+	   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>

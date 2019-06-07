@@ -1,0 +1,116 @@
+page-aidog-reward {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		
+		
+	    background-size: cover;
+
+		
+		margin-bottom: 0px !important;
+		padding-top: 20px;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 25px;
+	}
+
+
+	.card-md, .card-ios {
+	   
+	    background: transparent;
+	}
+	.finish_withdraw{
+		background: #4caf50 !important;
+	}
+	.number_ramdom{
+	    font-size: 90px;
+	    font-weight: bold;
+	    border: 5px solid #160c56;
+	    
+	    color: #160c56;
+	    width: 250px;
+	    height: 250px;
+	    border-radius: 50%;
+	    line-height: 220px;
+	    margin: 0 auto;
+	}
+	.button-dialing{
+	    text-decoration: none;
+	    background: #ff8181;
+	    color: #FFF;
+	    /* width: 90px; */
+	    /* height: 90px; */
+        width: 140px !important;
+    	height: 40px;
+	    /* border-radius: 50%; */
+	    text-align: center;
+	    font-weight: bold;
+	    vertical-align: middle;
+	    overflow: hidden;
+	    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.29);
+	    border-bottom: solid 3px #bd6565;
+	    -webkit-transition: .4s;
+	    transition: .4s;
+	    width: auto;
+	    /* float: left; */
+	     margin: 0 auto; 
+        margin-top: 20px;
+	}
+
+	.button-dialing:active{
+	    -ms-transform: translateY(2px);
+	    -webkit-transform: translateY(2px);
+	    transform: translateY(2px);
+	    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+
+	}
+	.button-dialing.start{
+		background: #4caf50 !important;
+		border-bottom: solid 3px #337936;
+	}
+	.count_turn{
+		text-transform: capitalize;
+	    color: #160c56;
+	    text-align: center;
+	    margin-top: 5px;
+	    font-size: 12px;
+	    font-weight: 500;
+	}
+}

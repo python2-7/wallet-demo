@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Deposit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content_deposit" text-center *ngIf="address">
+  <ion-row>
+      <ion-col col-12 class="top_deposit">
+        <p>{{currency}} Deposit Address</p>
+        <p class="address">{{address}}</p>
+      </ion-col>
+  </ion-row>
+  
+  <ion-row  class="content_deposit_bottom">
+      <ion-col col-6 class="left" (click)="CopyWallet(address)">
+        <ion-icon name="copy"></ion-icon>
+        <p>Copy Address</p>
+      </ion-col>
+      <ion-col col-6 class="right" (click)="ShowAddress()">
+        <ion-icon name="barcode"></ion-icon>
+        <p>Show QR Code</p>
+      </ion-col>
+  </ion-row>
+	
+	
+</ion-content>

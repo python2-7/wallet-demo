@@ -1,0 +1,112 @@
+page-add-new-contactus {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 25px;
+	}
+	.content_withdraw form{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.list-md .item-block .item-inner,.list-ios .item-block .item-inner{
+		border-bottom: none;
+	}
+	.content_withdraw .input-wrapper{
+	    border: 1px solid #efefef;
+	}
+	.item-md.item-block .item-inner,.item-ios.item-block .item-inner{
+		padding-right: 16px;
+	}
+	.text-input-md,.text-input-ios{
+		margin: 15px 8px;
+		font-size: 12px;
+	}
+	.content_withdraw ion-item.password{
+		margin-top: 50px;
+	}
+	.content_withdraw ion-item.password ion-input{
+		
+		background: #d8d8d8;
+    	border: 1px solid #cac8c8;
+	} 
+	.content_withdraw .fee{
+		font-size: 12px;
+    	padding-left: 22px;
+	}
+	.content_withdraw button{
+		background: #fff;
+	    height: 35px;
+	    font-weight: 400;
+	    color: #FF5722;
+	    width: 80%;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	    border: 1px solid #FF5722;
+	    box-shadow: none;
+	    line-height: 35px;
+	    border-radius: 15px;
+	}
+	.content_withdraw button:hover{
+		background: transparent !important;
+	}
+	.list-md .item-input:last-child,.list-ios .item-input:last-child{
+		border-bottom: none !important;
+	}
+	.content_withdraw ion-col img{
+		position: absolute;
+	    right: 20px;
+	    top: 19px;
+	    width: 20px;
+	}
+	.content_withdraw ion-col span.text{
+	    position: absolute;
+	    right: 20px;
+	    top: 19px;
+	    color: #969696;
+	    font-size: 12px;
+	}
+	form .input {
+	    
+	    background: #f7f7f7;
+	}
+}

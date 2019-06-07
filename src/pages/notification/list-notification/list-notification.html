@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>List Notification</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="exchange_record">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-card>
+	    <ion-card-content class="history">
+	    
+	    	<ion-grid  *ngFor="let item of history " style="border-bottom: 1px solid #eee;" >
+		      	<ion-row (click)="ViewDetailNotification(item._id)">
+		          	<ion-col col-12 style="">
+		          		
+		          		<span class="large" [innerHTML]="item.title">	</span>
+		          		 
+		          	</ion-col>
+		          	<ion-col col-12>
+		          		<span float-left class="date_added">{{item.date_added}}</span>
+		          	</ion-col>
+		          	
+		        </ion-row>
+		        
+			</ion-grid>
+			<p text-center margin-top  *ngIf="count_history == 0 || history_load_no == true">No data</p>
+	    	
+	    </ion-card-content>
+	</ion-card>
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="count_history > 0 && history_load_no == false">
+	   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>

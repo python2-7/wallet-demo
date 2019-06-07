@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>{{currency}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_wallet" >
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-row class="top top_wallet">
+		<ion-col col-12 >
+			<h3>{{amount}} {{currency}}</h3>
+			<p>$ {{amount_usd}}</p>
+		</ion-col>
+		<ion-col col-10 text-center  offset-1 class="bottom_wallets">
+			<ion-row>
+				<ion-col col-4 class="border-right-0" (click)="ViewDeposit()">
+					<img src="assets/imgs/asset-in.png"> Deposit	
+				</ion-col>
+				<ion-col col-4 class="border-right-0" (click)="ViewExchange()">
+					<img class="exchange" src="assets/imgs/asset-change.png"> Exchange
+				</ion-col>
+				<ion-col col-4  (click)="ViewWithdraw()">
+					<img src="assets/imgs/asset-out.png"> Withdrawal
+				</ion-col>
+			</ion-row>
+		</ion-col>
+	</ion-row> 
+	<div class="border-space"></div>
+	<ion-row class="center">
+		<ion-col col-12 class="top_center">
+			<h3>History Deposit/Withdraw</h3>
+		</ion-col>
+		<div class="heder_segment">
+			<ion-segment [(ngModel)]="tab_wallet">
+				<ion-segment-button value="deposit">
+					Deposit
+				</ion-segment-button>
+				<ion-segment-button value="withdraw">
+					Withdrawal
+				</ion-segment-button>
+			</ion-segment>
+		</div>
+		<div [ngSwitch]="tab_wallet" class="content_segment">
+			<div *ngSwitchCase="'deposit'">
+				<ion-list>
+				  	<ion-item *ngFor="let item_depoist of history_deposit">
+					    
+					    <div class="right">
+					    	<p class="top" text-left>{{item_depoist.txt_id}}</p>
+					    	<p *ngIf="item_depoist.type == 'withdraw'" class="center send"  text-right>-{{item_depoist.amount}}</p>
+					    	<p *ngIf="item_depoist.type == 'deposit'" class="center receive"  text-right>+{{item_depoist.amount}}</p>
+					    	<p class="bottom"  text-left>{{item_depoist.date_added}}</p>
+					    </div>
+				  	</ion-item>
+
+				</ion-list>
+				<p text-center class="data_history" *ngIf="count_history_deposit == 0">There is no data</p>
+				<ion-infinite-scroll (ionInfinite)="doInfinite_depoist($event)" *ngIf="count_history_deposit > 0">
+				   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+				</ion-infinite-scroll>
+			</div>
+			<div *ngSwitchCase="'withdraw'">
+				<ion-list>
+			  	<ion-item *ngFor="let item_withdraw of history_withdraw">
+				    
+				    <div  class="right">
+				    	<p class="top" text-left [innerHTML]="item_withdraw.txt_id"></p>
+				    	<p *ngIf="item_withdraw.type == 'withdraw'" class="center send"  text-right>-{{item_withdraw.amount}}</p>
+				    	<p *ngIf="item_withdraw.type == 'deposit'" class="center receive"  text-right>+{{item_withdraw.amount}}</p>
+				    	<p class="bottom"  text-left>{{item_withdraw.date_added}}</p>
+				    </div>
+			  	</ion-item>
+
+			</ion-list>
+			<p text-center class="data_history" *ngIf="count_history_withdraw == 0">There is no data</p>
+			<ion-infinite-scroll (ionInfinite)="doInfinite_withdraw($event)" *ngIf="count_history_withdraw > 0">
+			   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+			</ion-infinite-scroll>
+			</div>
+		</div>
+	</ion-row>
+	
+	
+</ion-content>

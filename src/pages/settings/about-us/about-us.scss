@@ -1,0 +1,64 @@
+page-about-us {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #eaeaea !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 20px;
+	}
+
+	.content_settings .img_about{
+		width: 150px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.content_settings ion-card{
+		 width: calc(100% - 0px);
+	    
+	    margin:0px;
+	}
+	.content_settings p{
+		margin: 5px;
+	    font-size: 12px;
+	    color: #6d6b6b;
+	    text-align: center;
+	}
+}

@@ -1,0 +1,118 @@
+page-eanings {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #eaeaea !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 20px;
+	}
+
+	.card_capit_header{
+	    position: relative;
+	    background: #13214d;
+	    height: 140px;
+	    width: calc(100% - 0px);
+	    background-size: cover;
+	    margin:0px;
+	}	
+	.card_capit_header div{
+		width: 100%;
+		float: left;
+	}
+	.card_capit_header div p{
+		color: #FFFFFF;
+	    margin-bottom: 10px;
+	    float: left;
+	    width: 100%
+	}
+	.card_capit_header div p b{
+	    color: #4CAF50;
+	}
+	.card_capit_header div p span {
+	    width: 50%;
+	    float: left;
+	    text-align: right;
+	    padding-right: 5px;
+	}
+	.card_capit_header div p b {
+	    width: 50%;
+	    float: left;
+	    text-align: left;
+	    padding-left: 5px;
+	}
+	.card_capit_header div span{
+		color: #FFFFFF;
+    	
+	}
+	.card_capit_header .center{
+		padding: 5px 15px;
+	}
+	.card_capit_header .top,.card_capit_header .bottom{
+		padding: 5px 15px;
+		
+	}
+	.card_capit_header .member{
+		color: red;
+	}
+	.content_ea{
+		 width: calc(100% - 0px);
+	    
+	    margin:0px;
+	}
+	.content_ea img{
+	    width: 30px;
+	    height: 30px;
+	    margin-top: 4px;
+	    margin-left: 5px;
+	}
+	.content_ea ion-avatar{
+		margin-right: 0px !important;
+		    min-width: 50px;
+	}
+	.content_ea ion-item{
+		border-bottom: 1px solid #eee;
+		padding: 5px 10px;
+	}
+	.content_ea h6{
+		font-size: 14px;
+    	font-weight: 500;
+	}
+}

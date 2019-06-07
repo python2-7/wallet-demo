@@ -1,0 +1,82 @@
+<!--
+  Generated template for the AddNewWalletPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+	  	<button (click)="goback()" ion-button class="left_heder">
+	      <img  src="assets/imgs/back.png"  />
+	    </button>
+	    <ion-title>Add Wallet Address</ion-title>
+	   
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="content_withdraw">
+	<ion-row class="form">
+		<form  (ngSubmit)="SubmitForm()">
+   			
+			<ion-list>
+				<ion-row>
+					<ion-col style="position: relative;">
+						<ion-item>
+						    
+						    <ion-input class="input" [(ngModel)]="form.name" placeholder="Name" name="name" type="text" required></ion-input>
+					  	</ion-item>
+					  	
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col style="position: relative;">
+						<ion-item>
+						    <ion-label fixed>Address</ion-label>
+						    <ion-input class="input" [(ngModel)]="form.address" placeholder="Wallet address" name="address" type="text" required></ion-input>
+					  	</ion-item>
+					  	<img src="assets/imgs/qr_code_icon.png" (click)="scanCode()" />
+					</ion-col>
+				</ion-row>
+			 	<ion-row> 
+					<ion-col style="position: relative;">
+			 			<ion-item>
+				    		<ion-label class="coin" fixed>Coin</ion-label>
+				    		
+						    <ion-select [(ngModel)]="form.currency" [selectOptions]="selectOptions" class="selecte_coin" interface="action-sheet" name="currency" >
+						      <!-- <ion-option value="ASIC" selected="true">ASIC</ion-option> -->
+						      <ion-option value="BTC" selected="true">BTC</ion-option>
+						      <ion-option value="ETH">ETH</ion-option>
+						      <ion-option value="LTC" >LTC</ion-option>
+							  <ion-option value="DASH" >DASH</ion-option>  
+							  <!-- <ion-option value="EOS" >EOS</ion-option>   -->
+							  <ion-option value="XRP" >XRP</ion-option>  
+							  <ion-option value="USDT" >USDT</ion-option>  
+						    </ion-select>
+				    		
+			  			</ion-item>
+			  			
+			  		</ion-col>
+			  	</ion-row>
+			  	<ion-row>
+					<ion-col style="position: relative;">
+					  	<ion-item class="password">
+						   
+						    <ion-input class="input" [(ngModel)]="form.password_transaction"  name="password_transaction" type="password" placeholder="Transaction Password" required></ion-input>
+					  	</ion-item>
+					</ion-col>
+				</ion-row>
+			  	
+			</ion-list>
+			
+
+			<ion-row class="button_customer">
+			 	<ion-col>
+			    	<button ion-button full type="submit" block>Confirm</button>
+			 	</ion-col>
+			</ion-row>
+			
+		</form>
+	</ion-row>
+</ion-content>

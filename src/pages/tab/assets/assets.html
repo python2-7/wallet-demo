@@ -1,0 +1,168 @@
+<ion-content padding  (ionScroll)="onScroll($event)">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+  	<ion-card class="card_header_cus" text-center >
+	    <p text-center> 
+	    	<span>Total assets(USD)</span>
+	    </p>
+	    <h3 text-center class="">
+	    	&asymp; $ {{total_usd}}
+	    </h3>
+  	</ion-card>
+	<ion-card class="card_header" >
+	    <p text-left class="top_left"> 
+	    	<img  src="assets/imgs/asipay.png" /> 
+	    	<span>Assets Value(USD)</span>
+	    </p>
+	    <p text-right class="bottom_right">
+	    	 $ {{total_usd}}
+	    </p>
+  	</ion-card>
+	<!-- <ion-card class="card_capit_header">
+	    <p text-left class="top_left"> 
+	    	<img  src="assets/imgs/asipay.png" /> 
+	    	<span>Total assets(USD)</span>
+	    </p>
+	    <p text-right class="bottom_right">
+	    	 $ {{total_usd}}
+	    </p>
+  	</ion-card> -->
+
+  	<!-- <ion-card class="announcement" (click)="ViewListNotification()" 	>
+  		<div class="left">
+  			Announcement
+  		</div>
+  		<div class="right">
+  		
+  			<ion-slides *ngIf="list_notification && list_notification.length" autoplay="3000" loop="true" direction="vertical"  speed="500" class="slides" pager="true">
+				<ion-slide *ngFor="let item of list_notification" >
+					<span>{{item.title}}</span>
+				</ion-slide>
+				
+			</ion-slides>
+  			
+  		</div>
+  	</ion-card> -->
+  	
+  	<ion-card class="currency currency_div">
+  		<ion-list>
+  			<!-- <ion-item (click)="ViewWallet('ASIC',(balance.coin/100000000).toFixed(8),(price_coin.coin * balance.coin /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/asipay.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>ASIC</h6>
+			    	<p> $ {{(price_coin.coin*1).toFixed(2)}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.coin/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.coin * balance.coin /100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item> -->
+		  	<ion-item (click)="ViewWallet('BTC',(balance.bitcoin/100000000).toFixed(8),(price_coin.bitcoin * balance.bitcoin /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/cryptocurrency/btc.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>BTC</h6>
+			    	<p> $ {{price_coin.bitcoin}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.bitcoin/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.bitcoin * balance.bitcoin / 100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item>
+		  	<ion-item (click)="ViewWallet('ETH',(balance.ethereum/100000000).toFixed(8),(price_coin.ethereum * balance.ethereum /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/cryptocurrency/eth.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>ETH</h6>
+			    	<p> $ {{price_coin.ethereum}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.ethereum/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.ethereum * balance.ethereum / 100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item>
+		  	<ion-item (click)="ViewWallet('XRP',(balance.ripple/100000000).toFixed(8),(price_coin.ripple * balance.ripple /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/cryptocurrency/xrp.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>XRP</h6>
+			    	<p> $ {{price_coin.ripple}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.ripple/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.ripple * balance.ripple / 100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item>
+		  	<ion-item (click)="ViewWallet('LTC',(balance.litecoin/100000000).toFixed(8),(price_coin.litecoin * balance.litecoin /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/cryptocurrency/ltc.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>LTC</h6>
+			    	<p> $ {{price_coin.litecoin}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.litecoin/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.litecoin * balance.litecoin / 100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item>
+		  	<ion-item (click)="ViewWallet('USDT',(balance.tether/100000000).toFixed(8),(price_coin.tether * balance.tether /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/cryptocurrency/usdt.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>USDT</h6>
+			    	<p> $ {{price_coin.tether}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.tether/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.tether * balance.tether / 100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item>
+		  	<ion-item (click)="ViewWallet('DASH',(balance.dash/100000000).toFixed(8),(price_coin.dash * balance.dash /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/cryptocurrency/dash.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>DASH</h6>
+			    	<p> $ {{price_coin.dash}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.dash/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.dash * balance.dash / 100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item>
+		  	<!-- <ion-item (click)="ViewWallet('EOS',(balance.eos/100000000).toFixed(8),(price_coin.eos * balance.eos /100000000).toFixed(2))">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/cryptocurrency/eos.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>EOS</h6>
+			    	<p> $ {{price_coin.eos}}</p>
+			    </div>
+			    <div float-right text-right>
+			    	<span>{{(balance.eos/100000000).toFixed(8)}}</span>
+			    	<p> $ {{(price_coin.eos * balance.eos / 100000000).toFixed(2)}}</p>
+			    </div>
+		  	</ion-item> -->
+
+
+		  	
+
+		</ion-list>
+  	</ion-card>
+</ion-content>

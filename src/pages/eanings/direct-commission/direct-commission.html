@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Direct history</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="exchange_record">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-card>
+	    <ion-card-content class="history">
+	    
+	    	<ion-grid *ngFor="let item of history" style="border-bottom: 1px solid #eee;" >
+		      	
+		      	<ion-row >
+		          	<ion-col col-2 class="left" text-center>
+		          		<img  class="currency_from" src="assets/imgs/cryptocurrency/{{item.currency}}.png" />
+		          	</ion-col>
+		          	<ion-col col-10 class="right">
+		          		<p><span class="date_added" float-left>{{item.date_added}}</span><span float-right class="amount"> +{{item.amount}}</span> </p>
+		          			
+		          			<p class="detail">{{item.detail}}</p>
+		          	</ion-col>
+		          	
+		        </ion-row>
+		       
+		        
+		       
+			</ion-grid>
+			<p text-center margin-top *ngIf="count_history == 0 || history_load_no == true">No data</p>
+	    	
+	    </ion-card-content>
+	</ion-card>
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="count_history > 0 && history_load_no == false">
+	   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>

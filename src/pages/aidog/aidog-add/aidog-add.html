@@ -1,0 +1,51 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Smart Ai-Bald Eagle</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_ai">
+	<ion-row style="margin-top: 40px">
+		
+		<ion-col col-12 text-center>
+			<div  class="top">
+				<p class="name">{{currency}}</p>
+				<p class="amount">{{amount_active}}</p>
+			</div>
+		</ion-col>
+	</ion-row>
+
+	<!-- <ion-row>
+		
+		<ion-col col-12  text-center>
+			<div  class="center">
+				<p class="name">ASIPAY</p>
+				<p class="amount">0.14123223</p>
+			</div>
+		</ion-col> 
+	</ion-row> -->
+
+	<ion-row style="margin-top: 30px">
+		
+		<ion-col col-12  text-center>
+			<form  (ngSubmit)="SubmitForm()">
+				<div  class="bottom">
+					<h2 class="" >Ai-Bald Eagle</h2>
+					<ion-input [(ngModel)]="form.amount" class="input_login" 	name="amount" type="number" required placeholder="Please enter the number">
+	            	</ion-input>
+					<ion-input [(ngModel)]="form.password_transaction" class="input_login" 	name="password_transaction" type="password" required placeholder="Please input the transaction password">
+	            	</ion-input>
+	            	<button ion-button full type="submit" block>Submit</button>
+				</div>
+			</form>
+		</ion-col>
+	</ion-row>
+</ion-content>

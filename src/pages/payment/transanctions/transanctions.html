@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Transaction</ion-title>
+    <!-- <button (click)="goback()" ion-button  class="right_heder">
+      <img  src="assets/imgs/sx.png"  />
+    </button> -->
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_transaction">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-row >
+		<ion-col col-2 text-center class="">
+			Coin
+		</ion-col>
+		<ion-col col-5 text-center>
+			Date
+		</ion-col>
+		<ion-col col-5 text-center>
+			Amount
+		</ion-col>
+	</ion-row>
+	<ion-row style="" *ngFor="let item of history" >
+      <ion-col col-2 >
+        <ion-label text-center>{{item.currency}}</ion-label>
+      </ion-col>
+      <ion-col col-5 >
+        <ion-label text-center>{{item.date_added}} 
+        </ion-label>
+      </ion-col>
+        <ion-col col-5 style="">
+        <ion-label text-center>
+        	<span class="receive" *ngIf="item.types == 'receive'">+{{item.amount}}</span>
+        	<span class="send" *ngIf="item.types == 'send'">-{{item.amount}}</span>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+	<p text-center class="data_history" *ngIf="count_history == 0">There is no data</p>
+
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="count_history > 0">
+	   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>

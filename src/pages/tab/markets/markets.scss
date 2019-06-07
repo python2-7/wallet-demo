@@ -1,0 +1,97 @@
+page-markets {
+	.scroll-content{
+		background: #ffffff !important;
+	}
+	.content_markets h3{
+		color: #fff;
+	    font-size: 16px;
+	    font-weight: 400;
+	    margin-bottom: 26px;
+        margin-top: 10px !important;
+	}
+  .toolbar-title{
+    text-align: center;
+    font-size: 14px !important;
+    color: #fff;
+  }
+	.top_market{
+		padding-bottom: 10px;
+    background: #160c56;
+	}
+  ion-header::after{
+    display: none;
+    content: '';
+  }
+	.top_market img{
+		width: 10px;
+		margin-bottom: -1px;
+	}
+	.top_market p {
+    	
+    }
+    .top_market .left{
+    	
+    	color: #f39a38;
+    	font-size: 11px;
+      font-weight: 500;
+    }
+    .top_market .right{
+    	margin-top: 3px;
+    	margin-left: 2px;
+      font-weight: 500;
+    }
+    .top_market ion-col{
+    	padding: 0px;
+    }
+   	.item_markets ion-col{
+   		line-height: 50px;
+   	}
+   	.item_markets .name img{
+   		width: 20px;
+	    margin-right: 10px;
+	    margin-bottom: -5px;
+
+   	}
+   	.item_markets .change img{
+	    
+	    width: 8px;
+	    margin-left: 3px;
+	    margin-bottom: 0px;
+   	}
+   	.item_markets .right{
+   		color: #1f1f1f;
+   	}
+   	
+   	.item_markets .price{
+   		color: #1f1f1f;
+   	}
+   	.item_markets .price_color{
+   		color: #FF574F;
+      font-weight: 500;
+   	}
+   	.item_markets .change .left{
+   		color: #fff;
+      font-size: 13px;
+      width: 72px;
+      display: inline-table;
+      height: 30px;
+      line-height: 29px;
+      margin-top: 10px;
+      background: #f10909;
+   	}
+    .item_markets .change .right{
+      display: none;
+    }
+   	.up.item_markets  .price_color{
+   		color: #00C79C;
+   	}
+   	.up.item_markets .change  .left{
+   		background: #00C79C;
+   	}
+   	.content_markets .item_markets{
+      border-bottom: 1px solid #f3f3f3;
+    }
+    .toolbar-background{
+          background:  #160c56;
+    }
+}

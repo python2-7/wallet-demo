@@ -1,0 +1,74 @@
+page-aidog-record {
+	.toolbar-background{
+	    background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+		
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.content_record .left{
+		float: left;
+	}
+	.content_record .right{
+		float: right;
+	}
+	.content_record .left p{
+		color: #b3aeae;
+    	font-size: 13px;
+    	padding: 10px 0;
+	}
+	.content_record .left span{
+		color: #2d2d2d;
+	}
+	.content_record .right p{
+		color: #b3aeae;
+    	font-size: 13px;
+    	padding: 10px 0;
+	}
+	.content_record .right span{
+		color: #6f6f6f;
+		font-size: 14px;
+	}
+	.content_record .right span .open{
+		color: #8fc320;
+	}
+	.content_record .right span .close{
+		color: #FF5722;
+	}
+	.content_record ion-item{
+		border-bottom: 1px solid #eee;
+	}
+	.item-block .item-inner{
+		border-bottom: none !important;
+	}
+}

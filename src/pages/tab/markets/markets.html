@@ -1,0 +1,259 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Markets</ion-title>
+  </ion-navbar>
+  <ion-row class="top_market">
+         <ion-col col-4 text-center>
+            <span text-center>
+               <span class="left">Coin</span>
+               
+            </span>
+
+         </ion-col>
+         <ion-col col-4 text-center>
+            <span text-center>
+               <span class="left">Last Time Price</span>
+               
+            </span>
+         </ion-col>
+         <ion-col col-4 text-center>
+            <span text-center>
+               <span class="left">Change</span>
+              
+            </span>
+         </ion-col>
+      </ion-row>
+</ion-header>
+<ion-content padding class="content_markets">
+   <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+   </ion-refresher>
+	<!-- <ion-row>
+   		<ion-col text-center>
+   		<h3 text-center>Markets</h3>
+   		</ion-col>
+   	</ion-row> -->
+
+   	<!-- <ion-row class="top_market">
+   		<ion-col col-4 text-center>
+   			<span text-center>
+   				<span class="left">Coin</span>
+   				<span class="right">
+   					<img  src="assets/imgs/icon_change_markets.png" />
+   					
+   				</span>
+   			</span>
+
+   		</ion-col>
+   		<ion-col col-4 text-center>
+   			<span text-center>
+   				<span class="left">Last Time Price</span>
+   				<span class="right">
+   					<img  src="assets/imgs/icon_change_markets.png" />
+   				</span>
+   			</span>
+   		</ion-col>
+   		<ion-col col-4 text-center>
+   			<span text-center>
+   				<span class="left">Change</span>
+   				<span class="right">
+   					<img  src="assets/imgs/icon_change_markets.png" />
+   				</span>
+   			</span>
+   		</ion-col>
+   	</ion-row> -->
+
+   	<ion-row class="item_markets" [ngClass]="{'up': change_coin.bitcoin >= 0}">
+         <ion-col col-4 text-center class="name">
+            <span text-center>
+               <span class="left">
+                  <img  src="assets/imgs/cryptocurrency/btc.png" />
+               </span>
+               <span class="right">
+                  BTC
+               </span>
+            </span>
+
+         </ion-col>
+         <ion-col col-4 text-center class="price">
+            <span class="price_color">$ {{(price_coin.bitcoin * 1).toFixed(2)}}</span>
+         </ion-col>
+         <ion-col col-4 text-center class="change">
+            <span text-center>
+               <span class="left" *ngIf="change_coin.bitcoin < 0">{{change_coin.bitcoin}}%</span>
+               <span class="left" *ngIf="change_coin.bitcoin >= 0">+{{change_coin.bitcoin}}%</span>
+               <span class="right">
+                  <img  src="assets/imgs/down_market.png" *ngIf="change_coin.bitcoin < 0"/>
+                  <img  src="assets/imgs/up_market.png" *ngIf="change_coin.bitcoin >= 0"/>
+               </span>
+            </span>
+         </ion-col>
+      </ion-row>
+
+   	
+
+   	<ion-row class="item_markets" [ngClass]="{'up': change_coin.ethereum >= 0}">
+   		<ion-col col-4 text-center class="name">
+   			<span text-center>
+   				<span class="left">
+   					<img  src="assets/imgs/cryptocurrency/eth.png" />
+   				</span>
+   				<span class="right">
+   					ETH
+   				</span>
+   			</span>
+
+   		</ion-col>
+   		<ion-col col-4 text-center class="price">
+   			<span class="price_color">$ {{(price_coin.ethereum  * 1).toFixed(2)}}</span>
+   		</ion-col>
+   		<ion-col col-4 text-center class="change">
+   			<span text-center>
+   				<span class="left" *ngIf="change_coin.ethereum < 0">{{change_coin.ethereum}}%</span>
+               <span class="left" *ngIf="change_coin.ethereum >= 0">+{{change_coin.ethereum}}%</span>
+               <span class="right">
+                  <img  src="assets/imgs/down_market.png" *ngIf="change_coin.ethereum < 0"/>
+                  <img  src="assets/imgs/up_market.png" *ngIf="change_coin.ethereum >= 0"/>
+               </span>
+   			</span>
+   		</ion-col>
+   	</ion-row>
+
+   	<ion-row class="item_markets" [ngClass]="{'up': change_coin.litecoin >= 0}">
+   		<ion-col col-4 text-center class="name">
+   			<span text-center>
+   				<span class="left">
+   					<img  src="assets/imgs/cryptocurrency/ltc.png" />
+   				</span>
+   				<span class="right">
+   					LTC
+   				</span>
+   			</span>
+
+   		</ion-col>
+   		<ion-col col-4 text-center class="price">
+   			<span class="price_color">$ {{(price_coin.litecoin  * 1).toFixed(2)}}</span>
+   		</ion-col>
+   		<ion-col col-4 text-center class="change">
+   			<span text-center>
+   				<span class="left" *ngIf="change_coin.litecoin < 0">{{change_coin.litecoin}}%</span>
+               <span class="left" *ngIf="change_coin.litecoin >= 0">+{{change_coin.litecoin}}%</span>
+               <span class="right">
+                  <img  src="assets/imgs/down_market.png" *ngIf="change_coin.litecoin < 0"/>
+                  <img  src="assets/imgs/up_market.png" *ngIf="change_coin.litecoin >= 0"/>
+               </span>
+   			</span>
+   		</ion-col>
+   	</ion-row>
+
+   	<ion-row class="item_markets" [ngClass]="{'up': change_coin.ripple >= 0}">
+   		<ion-col col-4 text-center class="name">
+   			<span text-center>
+   				<span class="left">
+   					<img  src="assets/imgs/cryptocurrency/xrp.png" />
+   				</span>
+   				<span class="right">
+   					XRP
+   				</span>
+   			</span>
+
+   		</ion-col>
+   		<ion-col col-4 text-center class="price ">
+   			<span class="price_color up">$ {{(price_coin.ripple  * 1).toFixed(2)}}</span>
+   		</ion-col>
+   		<ion-col col-4 text-center class="change">
+   			<span text-center>
+   				<span class="left" *ngIf="change_coin.ripple < 0">{{change_coin.ripple}}%</span>
+               <span class="left" *ngIf="change_coin.ripple >= 0">+{{change_coin.ripple}}%</span>
+               <span class="right">
+                  <img  src="assets/imgs/down_market.png" *ngIf="change_coin.ripple < 0"/>
+                  <img  src="assets/imgs/up_market.png" *ngIf="change_coin.ripple >= 0"/>
+               </span>
+   			</span>
+   		</ion-col>
+   	</ion-row>
+
+
+   	<ion-row class="item_markets" [ngClass]="{'up': change_coin.tether >= 0}">
+   		<ion-col col-4 text-center class="name">
+   			<span text-center>
+   				<span class="left">
+   					<img  src="assets/imgs/cryptocurrency/usdt.png" />
+   				</span>
+   				<span class="right">
+   					USDT
+   				</span>
+   			</span>
+
+   		</ion-col>
+   		<ion-col col-4 text-center class="price ">
+   			<span class="price_color up">$ {{(price_coin.tether  * 1).toFixed(2)}}</span>
+   		</ion-col>
+   		<ion-col col-4 text-center class="change">
+   			<span text-center>
+   				<span class="left" *ngIf="change_coin.tether < 0">{{change_coin.tether}}%</span>
+               <span class="left" *ngIf="change_coin.tether >= 0">+{{change_coin.tether}}%</span>
+               <span class="right">
+                  <img  src="assets/imgs/down_market.png" *ngIf="change_coin.tether < 0"/>
+                  <img  src="assets/imgs/up_market.png" *ngIf="change_coin.tether >= 0"/>
+               </span>
+            </span>
+   			
+   		</ion-col>
+   	</ion-row>
+
+   	<ion-row class="item_markets" [ngClass]="{'up': change_coin.dash >= 0}">
+   		<ion-col col-4 text-center class="name">
+   			<span text-center>
+   				<span class="left">
+   					<img  src="assets/imgs/cryptocurrency/dash.png" />
+   				</span>
+   				<span class="right">
+   					DASH
+   				</span>
+   			</span>
+
+   		</ion-col>
+   		<ion-col col-4 text-center class="price ">
+   			<span class="price_color up">$ {{(price_coin.dash  * 1).toFixed(2)}}</span>
+   		</ion-col>
+   		<ion-col col-4 text-center class="change">
+   			<span text-center>
+   				<span class="left" *ngIf="change_coin.dash < 0">{{change_coin.dash}}%</span>
+               <span class="left" *ngIf="change_coin.dash >= 0">+{{change_coin.dash}}%</span>
+               <span class="right">
+                  <img  src="assets/imgs/down_market.png" *ngIf="change_coin.dash < 0"/>
+                  <img  src="assets/imgs/up_market.png" *ngIf="change_coin.dash >= 0"/>
+               </span>
+   			</span>
+   		</ion-col>
+   	</ion-row>
+
+   	<!-- <ion-row class="item_markets" [ngClass]="{'up': change_coin.eos >= 0}">
+   		<ion-col col-4 text-center class="name">
+   			<span text-center>
+   				<span class="left">
+   					<img  src="assets/imgs/cryptocurrency/eos.png" />
+   				</span>
+   				<span class="right">
+   					EOS
+   				</span>
+   			</span>
+
+   		</ion-col>
+   		<ion-col col-4 text-center class="price ">
+   			<span class="price_color up">$ {{(price_coin.eos  * 1).toFixed(2)}}</span>
+   		</ion-col>
+   		<ion-col col-4 text-center class="change">
+   			<span text-center>
+   				<span class="left" *ngIf="change_coin.eos < 0">{{change_coin.eos}}%</span>
+               <span class="left" *ngIf="change_coin.eos >= 0">+{{change_coin.eos}}%</span>
+               <span class="right">
+                  <img  src="assets/imgs/down_market.png" *ngIf="change_coin.eos < 0"/>
+                  <img  src="assets/imgs/up_market.png" *ngIf="change_coin.eos >= 0"/>
+               </span>
+   			</span>
+   		</ion-col>
+   	</ion-row> -->
+</ion-content>

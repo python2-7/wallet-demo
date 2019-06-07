@@ -1,0 +1,118 @@
+page-verify-account {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #FFFFFF !important;
+		margin-bottom: 0px !important;
+		padding-top: 50px;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 20px;
+	}
+
+	.content_verifyaccount h3{
+		width: 100%;
+		font-size: 15px;
+		margin-bottom: 15px;
+	}
+	
+	.content_verifyaccount button,.btn_continue{
+		width: 90%;
+		height: 35px;
+		
+		border: 1px solid #FF5722;
+		color: #FF5722;
+		
+		font-size: 15px;
+		margin: 20px auto;
+		display: table;
+		background: #fff;
+		border-radius: 15px;
+	}
+
+	.step.tow button{
+		border: none;
+	}
+
+	.content_verifyaccount p{
+	    font-size: 10px;
+    	color: #5a5757;
+    	margin-bottom: 20px;
+	}
+	.content_verifyaccount .step img{
+	    max-width: 400px;
+	    margin: 0 auto;
+	    border: 1px solid #d6d6d6;
+	    border-radius: 10px;
+	    background: #f7f7f7;
+	}
+	.content_verifyaccount .step.tow button{
+		height: 50px;
+		margin: 8px auto;
+		color: #fff;
+		border-radius: 5px;
+		background: #e2e1e1;
+	}
+	.content_verifyaccount .step.tow button ion-icon{
+		color: #333131;
+	    font-size: 20px;
+	    margin-top: 7px;
+	}
+	.content_verifyaccount .step.tow button p{
+		color: #333131;
+	    
+	}
+	.btn_continue{
+		width: 90%; 
+		height: 35px !important;
+		background: #FFC107 !important;
+		color: #fff !important;
+		font-size: 15px !important;
+		margin: 20px auto !important;
+		display: table !important;
+	}
+	.content_verifyaccount.pending img{
+		border: none;
+		max-width: 80px;
+		background: none;
+	}
+	.content_verifyaccount.pending p{
+		font-size: 12px;
+	}	
+}

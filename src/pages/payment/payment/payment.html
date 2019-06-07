@@ -1,0 +1,85 @@
+
+<ion-header>
+	<ion-navbar>
+	  	
+	    <ion-title>Payments</ion-title>
+  	</ion-navbar>
+</ion-header>
+
+<ion-content class="content_transaction">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+  	<ion-row class="button_click">
+   		<ion-col col-6 class="" (click)=ViewCollect()>
+   			<div class="left">
+   				<img  src="assets/imgs/Mobile-Wallet-Market.png" />
+   			</div>
+    		<div class="right">
+    			<p>Collect</p>
+    			
+    		</div>
+    	</ion-col>
+
+      <ion-col col-6 class="padding-right-none" (click)="scanCode()">   
+        <div class="left">
+          <img  src="assets/imgs/scan-qrcode-13-1128534.png" />
+        </div>
+        <div class="right">
+          <p>Payment</p>
+          
+        </div>
+      </ion-col>
+  	</ion-row>
+	<ion-row class="top_header">
+		<ion-col col-2 text-center class="">
+			Coin
+		</ion-col>
+		<ion-col col-5 text-center>
+			Date
+		</ion-col>
+		<ion-col col-5 text-center>
+			Amount
+		</ion-col>
+	</ion-row>
+	<ion-row style="" *ngFor="let item of history" >
+      <ion-col col-2 >
+        <ion-label text-center>{{item.currency}}</ion-label>
+      </ion-col>
+      <ion-col col-5 >
+        <ion-label text-center>{{item.date_added}} 
+        </ion-label>
+      </ion-col>
+        <ion-col col-5 style="">
+        <ion-label text-center>
+        	<span class="receive" *ngIf="item.types == 'receive'">+{{item.amount}}</span>
+        	<span class="send" *ngIf="item.types == 'send'">-{{item.amount}}</span>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+	<p text-center class="data_history" *ngIf="count_history == 0">There is no data</p>
+
+	
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="count_history > 0">
+	   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>
+<!-- <ion-content padding class="content_payment">
+	<ion-row text-center (click)="ViewCollect()">
+		<div class="top">
+			<h3 text-center>Collect</h3>
+		</div>
+	</ion-row>
+
+	<ion-row text-center (click)="scanCode()">
+		<div class="center">
+			<h3 text-center>Pay</h3>
+		</div>
+	</ion-row>
+
+	<ion-row text-center (click)="ViewTransanction()">
+		<div class="bottom">
+			<h3 text-center>Transactions</h3>
+		</div>
+	</ion-row>
+</ion-content> -->

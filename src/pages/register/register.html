@@ -1,0 +1,64 @@
+<ion-header>
+   <ion-navbar>
+      <button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Sign Up</ion-title>
+     
+   </ion-navbar>
+</ion-header>
+<ion-content class="register-page">
+   <div class="logo">
+      <img src="assets/imgs/logo.png" height="80"/>
+   </div>
+   <form (ngSubmit)="SubmitForm()">
+   	
+      <ion-list no-lines>
+         <ion-item>
+            <ion-input class="input_login"  placeholder="Email" [(ngModel)]="form.email" name="username" type="text" autocapitalize="off">
+            </ion-input>
+            <ion-icon name="mail" class="display_none" item-right></ion-icon>
+         </ion-item>
+         <ion-item>
+            <ion-input class="input_login" placeholder="Password" [(ngModel)]="form.password" name="password" type="password" autocapitalize="off">
+            </ion-input>
+            <ion-icon  class="display_none" name="lock" item-right></ion-icon>
+         </ion-item>
+         
+         <ion-item>
+            <ion-input class="input_login"  name="password_repeat" [(ngModel)]="form.re_password" placeholder="Confirm Password" type="password" autocapitalize="off">
+            </ion-input>
+            <ion-icon  class="display_none" name="lock" item-right></ion-icon>
+         </ion-item>
+
+         <ion-item>
+            <ion-input class="input_login" placeholder="Password Transaction" [(ngModel)]="form.password_transaction" name="password_transaction" type="password" autocapitalize="off">
+            </ion-input>
+            <ion-icon  class="display_none" name="lock" item-right></ion-icon>
+         </ion-item>
+
+         <ion-item>
+            <ion-input class="input_login" placeholder="Confirm Password Transaction" [(ngModel)]="form.re_password_transaction" name="re_password_transaction" type="password" autocapitalize="off">
+            </ion-input>
+            <ion-icon  class="display_none" name="lock" item-right></ion-icon>
+         </ion-item>
+
+         <ion-item class="reffral" >
+            <ion-input class="input_login" placeholder="Sponser (Optional)" [(ngModel)]="form.customer_sponser" name="customer_sponser" type="text" autocapitalize="off">
+            </ion-input>
+            <label></label>
+            <ion-icon class="icon_scan" name="qr-scanner" item-right (click)="scanCode()"></ion-icon>
+         </ion-item>
+      </ion-list>
+      <div margin-top  class="customer_width">
+         <button ion-button type="submit" block>Create Account </button>
+      </div>
+      
+   </form>
+   <!-- <div class="customer_width" *ngIf="customer_sponser === ''">
+   
+      <button (click)="scanCode()" style="background: #FF5722" ion-button color="dark"  block>Scan Qr code sponser</button>
+   </div>  -->
+
+
+</ion-content>

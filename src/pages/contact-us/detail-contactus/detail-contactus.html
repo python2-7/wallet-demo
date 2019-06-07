@@ -1,0 +1,80 @@
+
+<ion-header>
+	<ion-navbar>
+	  	<button (click)="goback()" ion-button class="left_heder">
+	      <img  src="assets/imgs/back.png"  />
+	    </button>
+	    <ion-title>Reply support</ion-title>
+	    
+	  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content_support">
+	<ion-card class="">
+		<ion-card-content>
+			<h1 style="">{{history.subject}}</h1>
+
+			<ion-row class="border-bottom">
+	          	<ion-col col-3>
+	          		<img class="img_profile_support" src="{{img_profile}}">
+	          		<p style="color: #5f5d5d; font-size: 12px;" text-center>Mine</p>
+	          	</ion-col>
+	          	<ion-col col-9 class="message_support">
+          			<p style="margin-bottom: 20px;">{{history.message}}</p>
+          			<p class="date_support right" text-right>{{history.date_added}}</p>
+	          	</ion-col>
+	        </ion-row>
+
+	        <ion-row *ngFor="let item of history.reply; "  class="border-bottom">
+	          	<ion-col col-3 *ngIf="item.user_id != 'admin'">
+	          		<img class="img_profile_support" src="{{img_profile}}">
+	          		<p style="color: #5f5d5d; font-size: 12px;" text-center>Mine</p>
+	          	</ion-col>
+	          	<ion-col col-9 *ngIf="item.user_id != 'admin'" class="message_support">
+          			<p style="margin-bottom: 20px;"  [innerHTML]="item.message"></p>
+          			<p class="date_support right" text-right>{{item.date_added}}</p>
+	          	</ion-col>
+
+
+	          	<ion-col col-9 text-right *ngIf="item.user_id == 'admin'" class="message_support">
+          			<p style="margin-bottom: 20px;" class="message_admin" [innerHTML]="item.message"></p>
+          			<p class="date_support left" text-left>{{item.date_added}}</p>
+	          	</ion-col>
+	          	<ion-col col-3 *ngIf="item.user_id == 'admin'">
+	          		<img class="img_profile_support" src="assets/imgs/CustomerService-icon.png">
+	          		<p style="color: #5f5d5d; font-size: 12px;" text-center>Admin</p>
+
+	          	</ion-col>
+	        </ion-row>
+	    </ion-card-content>
+	</ion-card>
+	<ion-row >
+		<form  (ngSubmit)="SubmitForm()">
+   			
+			<ion-list>
+				
+			 	<ion-row>
+					<ion-col style="position: relative;">
+			 			<ion-item>
+				    		
+				    		<ion-textarea class="border" [(ngModel)]="form.content" name="content" placeholder="Content" rows="5"  ></ion-textarea>
+				    		
+			  			</ion-item>
+			  			
+			  		</ion-col>
+			  	</ion-row>
+			  	
+			</ion-list>
+			
+
+			<ion-row lass="customer_width">
+			 	<ion-col>
+			    	<button ion-button full type="submit" block>Send</button>
+			 	</ion-col>
+			</ion-row>
+			
+		</form>
+	</ion-row>
+</ion-content>

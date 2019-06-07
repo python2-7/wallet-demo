@@ -1,0 +1,122 @@
+page-records-exchange {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 20px;
+	}
+
+	.exchange_record .date_added{
+		font-size: 12px;
+		color: #8c8888;
+		text-align: center;
+	}
+	.exchange_record img{
+		width: 28px;
+	}
+	
+	.exchange_record .exchange img{
+		margin: 0 auto;
+		width: 18px;
+    	margin-top: 4px;
+	}
+	.exchange_record .form,.exchange_record .to{
+		line-height: 30px;
+		font-size: 13px;
+		color: #4CAF50;
+	    overflow: hidden;
+    	white-space: nowrap;
+    	text-overflow: ellipsis;
+	}
+	.exchange_record .to{
+		color: #FF5722
+	}
+	.exchange_record .currency_from{
+		margin-left: 10px;
+	}
+	.exchange_record .currency_to{
+		margin-right: 10px;
+	}
+	.exchange_record .date{
+		margin-top: 0px;
+	}
+	ion-card-content{
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	ion-card{
+		width: calc(100% - 0px) !important;
+		margin: 0px !important;
+	}
+	.search{
+		padding: 0 10px;
+		margin-bottom: 10px;
+	}
+	.search ion-col{
+		padding: 0px;
+	}
+	.search .from_currency,.search .to_currency{
+		width: 100%;
+		float: left;
+		max-width: 100%;
+		
+		background: #f1f1f1;
+	}
+	.search .exchange{
+	    margin-top: 6px;
+	}
+	.search p,.search .search{
+	    background: #000;
+	    color: #fff;
+	    
+	    font-size: 12px;
+	    float: left;
+    	width: 100%;
+	}
+	.search .search ion-icon{
+		font-size: 20px;
+		line-height: 37px;
+	}
+	.search ion-select{
+		padding: 8px 8px 8px 16px;
+	}
+}

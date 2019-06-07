@@ -1,0 +1,106 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Profit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_earnings">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-card class="card_capit_header">
+		<ion-row >
+			<ion-col col-12 >
+				<div class="top">
+			    	<p text-left><span>Level:</span> <b>{{wallet.level}}</b></p>
+			    	<p text-left><span>Total Volume:</span> <b>$ {{(wallet.total_node * 1).toFixed(2)}}</b></p>	
+			    	<p text-left><span>Total Profit:</span> <b>$ {{(wallet.total_earn /100000000).toFixed(2)}}</b></p>
+			    	<p text-left><span>Percent:</span> <b>{{wallet.percent_daily}}%</b></p>		
+			    </div>
+				
+			    
+			</ion-col>
+			
+		</ion-row>
+  	</ion-card>
+	<ion-card class="content_ea">
+	   <ion-list>
+  			<ion-item (click)="ViewProfitDaily()">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/asipay.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>Ai-Bald Eagle</h6>
+			    	
+			    </div>
+			    <div float-right text-right>
+			    	<h6>{{(wallet.d_wallet /100000000).toFixed(8)}} ASIC</h6>
+			    </div>
+		  	</ion-item>
+
+		  	<ion-item (click)="ViewProfitReffral()">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/asipay.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>Direct</h6>
+			    </div>
+			    <div float-right text-right>
+			    	<h6>{{(wallet.r_wallet/100000000).toFixed(8)}} ASIC</h6>
+			    </div>
+		  	</ion-item>
+
+		  	<ion-item (click)="ViewProfitSystem()">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/asipay.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>Linking</h6>
+			    	
+			    </div>
+			    <div float-right text-right>
+			    	<h6>{{(wallet.s_wallet/100000000).toFixed(8)}} ASIC</h6>
+			    </div>
+		  	</ion-item>
+
+		  	<ion-item (click)="ViewProfitLeader()">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/asipay.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>Leadership</h6>
+			    </div>
+			    <div float-right text-right>
+			    	<h6>{{(wallet.l_wallet/100000000).toFixed(8)}} ASIC</h6>
+			    </div>
+		  	</ion-item>
+
+		  	<ion-item (click)="ViewProfitShare()">
+			    <ion-avatar item-start>
+			      <img src="assets/imgs/asipay.png">
+			    </ion-avatar>
+			    
+			    <div float-left text-left>
+			    	<h6>Share</h6>
+			    </div>
+			    <div float-right text-right>
+			    	<h6>{{(wallet.ss_wallet/100000000).toFixed(8)}} ASIC</h6>
+			    </div>
+		  	</ion-item>
+		  	
+		</ion-list>
+	</ion-card>
+	
+</ion-content>

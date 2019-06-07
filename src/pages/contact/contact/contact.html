@@ -1,0 +1,30 @@
+<ion-header>
+  	<ion-navbar>
+	  	<button (click)="goback()" ion-button class="left_heder">
+	      <img  src="assets/imgs/back.png"  />
+	    </button>
+	    <ion-title>Contact</ion-title>
+	    <button (click)="ViewAddNewWalletPage()"  ion-button  class="right_heder">
+	      <img  src="assets/imgs/add.png"  />
+	    </button>
+	</ion-navbar>
+
+</ion-header>
+
+ 
+<ion-content padding class="contents">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-row *ngFor="let item of history" (click)="SelectAddress(item.address)">
+		<ion-col col-4 text-center>
+			{{item.name}}
+		</ion-col>
+		<ion-col col-8 text-center>
+			{{item.address}}
+		</ion-col>
+	</ion-row>
+
+	
+	<p text-center class="data_history" *ngIf="count_history == 0">There is no date</p>
+</ion-content>

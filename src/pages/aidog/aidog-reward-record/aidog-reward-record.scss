@@ -1,0 +1,81 @@
+page-aidog-reward-record {
+	.toolbar-background{
+	    background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+		
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.exchange_record .date_added{
+		font-size: 12px;
+		color: #8c8888;
+		text-align: center;
+	    margin-top: 5px;
+	}
+	.exchange_record img{
+		width: 28px;
+	}
+	
+	
+	
+	.exchange_record .amount span{
+		line-height: 40px;
+		color: #4CAF50
+	}
+	.exchange_record .detail{
+		color: #FF5722
+	}
+	.exchange_record .currency_from{
+		width: 35px;
+	    margin: 0 auto;
+	    margin-top: 2px;
+	}
+	
+	
+	ion-card-content{
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+	}
+	ion-card{
+		width: calc(100% - 0px) !important;
+		margin: 0px !important;
+	}
+	.exchange_record .right p{
+		width: 100%;
+		float: left;
+		font-size: 13px;
+	}
+	.exchange_record ion-item{
+		padding-left: 0px;
+	}
+}

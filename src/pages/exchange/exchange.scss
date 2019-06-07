@@ -1,0 +1,240 @@
+page-exchange {
+	.toolbar-background{
+	    background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute; 
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+
+	}
+	.content_exchange .top{
+		padding: 5px;
+	}
+	.content_exchange .top label{
+		width: 100%;
+	    float: left;
+	    text-align: center;
+	    color: #464444;
+	    font-size: 12px;
+	    margin-bottom: 3px;
+	}
+	.content_exchange .top .left h3,.content_exchange .top .left  ion-select{
+		background: #8BC34A;
+	    font-size: 18px;
+	    margin-bottom: 0px;
+	    max-width: 100%;
+	    /* font-weight: bold; */
+	    padding-bottom: 0px;
+	    color: #fff;
+
+	    padding: 3px 15px 17px 15px;
+	}
+	.content_exchange .top .left{
+		
+	}
+	.content_exchange .top .left p,.content_exchange .top .right p{
+		color: #fff;
+    	margin-top: -18px;
+	    font-size: 12px;
+    }
+    .content_exchange .top .right h3,.content_exchange .top .right  ion-select{
+		background: #FFC107;
+	    font-size: 18px;
+	    margin-bottom: 0px;
+	    max-width: 100%;
+	   
+        padding-bottom: 0px;
+        color: #fff;	
+        padding: 3px 15px 17px 15px;
+	}
+	.content_exchange .exchange img{
+		width: 20px;
+		margin-top: 28px;
+	}
+	.content_exchange .top .right  ion-select,.content_exchange .top .left  ion-select{
+	    max-width: 100%;
+	    margin: 0 auto;
+	}
+	.content_exchange .top .left  ion-select .select-icon-inner{
+		    color: #fff;
+
+	}
+	.content_exchange .top .right  ion-select .select-icon-inner{
+		    color: #fff;
+	}
+	.content_exchange .center{
+	    background: linear-gradient(to top, #3F51B5 0%, #03A9F4 100%);
+	    padding: 15px 0;
+	}
+	.content_exchange .center p{
+		margin: 0px;
+	    font-size: 13px;
+	    color: #FFEB3B;
+
+	}
+	.content_exchange .form form{
+		width: 90%;
+		margin: 20px auto;
+		margin-bottom: 0px;
+	}
+	.content_exchange .form ion-item{
+		background: #dadada;
+	    border-radius: 5px;
+	    border: 1px solid #eee;
+	    margin-bottom: 15px;
+	}
+	.content_exchange .form .item-input .label-md,.content_exchange .form .item-input .label-ios{
+		color: #2b2929;
+    	font-size: 12px;
+	}
+	.content_exchange .form ion-label[fixed] {
+	    
+	    flex: 0 0 115px;
+	    width: 115px;
+	    min-width: 100px;
+	   
+	}
+	.content_exchange  button.button-customer{
+		background: #fff;
+	    height: 35px;
+	    font-weight: 400;
+	    color: #FF5722;
+	    width: 80%;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	    border: 1px solid #FF5722;
+	    
+	    line-height: 35px;
+        box-shadow: none;
+        border-radius: 15px;
+	}
+	.content_exchange  button.button-customer:hover{
+		background: transparent !important;
+	}
+	.content_exchange .fee{
+		font-size: 12px;
+    	margin-top: 0px;
+    	margin-bottom: 20px;
+	}	
+	.content_exchange ion-item.bottom{
+		margin-bottom: 0px;
+	}
+	.content_exchange ion-list{
+		margin-bottom: 0px;
+	}
+	ion-select .select-icon-inner{
+	 	
+	}
+	form .input {
+	    font-size: 12px;
+	}
+
+	.keyboard ion-col{
+	    text-align: center;
+	    padding: 12px;
+	    
+	    font-weight: bold;
+	    color: #403d3d;
+	    font-size: 25px;
+	}
+	.string_amount{
+		font-size: 30px;
+	    color: #353333;
+	    
+	    
+	}
+	.keyboard ion-row ion-col.col:active{
+	    background: #e8e8e8;
+	}
+	.error_number{
+		-webkit-animation-name: number; /* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+		animation-name: number;
+		animation-duration: 1s;
+	}
+	@-webkit-keyframes number {
+	  0%   {margin-left: 0px;}
+	  20%  {margin-left: -10px;}
+	  50%  {margin-left: 10px;}
+	  60%  {margin-left: -10px;}
+	  80%  {margin-left: 10px;}
+	  100% {margin-left: -10px;}
+	}
+
+	/* Standard syntax */
+	@keyframes number {
+	  0%   {margin-left: 0px;}
+	  20%  {margin-left: -10px;}
+	  50%  {margin-left: 10px;}
+	  60%  {margin-left: -10px;}
+	  80%  {margin-left: 10px;}
+	  100% {margin-left: -10px;}
+	}
+	.amount_currency {
+		background: #efeeee;
+		padding: 20px 0;
+	    border: 2px solid #eaeaea;
+	}
+	.amount_currency h3{
+		margin: 0px;
+	}
+	.amount_currency p{
+		margin: 0px;
+		text-align: center;
+	}
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner,.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+.list-md .item-input.item-input-has-focus:last-child, .list-md .item-input.input-has-focus:last-child,.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child,.item-ios.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-ios.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.item-ios.item-input.item-input-has-focus .item-inner, .item-ios.item-input.input-has-focus .item-inner,.item-ios.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+.list-ios .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-ios .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child,
+.list-ios .item-input.item-input-has-focus:last-child, .list-ios .item-input.input-has-focus:last-child,.list-ios .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child{
+	box-shadow: none !important;
+	border-bottom: none;
+}
+form .input{
+	font-size: 14px;
+}
+input, textarea {
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;
+}
+.prompt_alert_customer.exchange  .alert-message{
+	background: #484646;
+	padding-bottom: 0px;
+	color: #fff;
+}

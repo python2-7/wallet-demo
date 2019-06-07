@@ -1,0 +1,132 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Verify Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_verifyaccount" *ngIf="infomation.status_verityaccount == 0">
+	
+  <ion-card class="">
+     <ion-row class="step 1" *ngIf="status_step_start">
+      <ion-col col-12>
+       <h3 text-center>Start ID verification</h3>
+       <p>This verification process is designed to confirm your identity and protect you from identity theft. Click 'Help' for more information.</p>
+       <p>Please provide a clear, color picture of the entire document. Screenshots are not allowed. JPG or PNG only.</p>
+       <button (click)="ClickStartStep_Show_FrontID()">Start</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="step tow" *ngIf="status_step_frontid">
+      <ion-col col-12>
+       <h3 text-center>Upload front of identity card or Passport</h3>
+       
+      </ion-col>
+      <ion-col col-8>
+        <img src="{{img_frontid}}">
+        
+      </ion-col>
+      <ion-col col-4 class="rights">
+        <button (click)="ClickStartStep_Up_FrontID(1)"><ion-icon name="camera"></ion-icon><p>Take photo</p></button>
+        <button (click)="ClickStartStep_Up_FrontID(0)"><ion-icon name="folder-open"></ion-icon><p>Upload file</p></button>
+      </ion-col>
+
+      <ion-col col-12 *ngIf="status_btn_frontid">
+        <button class="btn_continue" (click)="ClickStartStep_Show_BackID()">Continue</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="step tow" *ngIf="status_step_backid">
+      <ion-col  col-12 style="">
+       <h3 text-center>Upload back of identity card or Passport</h3>
+       
+      </ion-col>
+      <ion-col col-8>
+        <img src="{{img_backid}}">
+      </ion-col>
+      <ion-col col-4 class="rights">
+        <button (click)="ClickStartStep_Up_BackID(1)"><ion-icon name="camera"></ion-icon><p>Take photo</p></button>
+        <button (click)="ClickStartStep_Up_BackID(0)"><ion-icon name="folder-open"></ion-icon><p>Upload file</p></button>
+      </ion-col>
+      <ion-col col-12 *ngIf="status_btn_backid">
+        <button class="btn_continue" (click)="ClickStartStep_Show_Avartar()">Continue</button>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="step tow" *ngIf="status_step_avatart">
+      <ion-col col-12>
+       <h3 text-center>Picture of yourself holding Photo ID</h3>
+       
+      </ion-col>
+      <ion-col col-8>
+        <img src="{{img_avatart}}">
+      </ion-col>
+      <ion-col col-4 class="rights">
+        <button (click)="ClickStartStep_Up_Avartar(1)"><ion-icon name="camera"></ion-icon><p>Take photo</p></button>
+        <button (click)="ClickStartStep_Up_Avartar(0)"><ion-icon name="folder-open"></ion-icon><p>Upload file</p></button>
+      </ion-col>
+
+      <ion-col col-12 *ngIf="status_btn_avatart">
+        <button class="btn_continue" (click)="ContinueFive()">Continue</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="step tow" *ngIf="status_step_complete">
+      <ion-col col-12>
+       <h3 text-center>Account verification system</h3>
+       
+      </ion-col>
+      <ion-col col-8 offset-2>
+        <img src="assets/imgs/load-dribbble.gif">
+
+      </ion-col>
+      <ion-col col-12>
+        <p>Your account is awaiting verification of the system. The system will verify your account after one to two business days</p> 
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+
+<ion-content class="content_verifyaccount pending" *ngIf="infomation.status_verityaccount == 1">
+  <ion-card class="">
+    <ion-row class="step tow" >
+      <ion-col col-12>
+       <h3 text-center>Account verification system</h3>
+       
+      </ion-col>
+      <ion-col col-8 offset-2>
+        <img src="assets/imgs/load-dribbble.gif">
+
+      </ion-col>
+      <ion-col col-12>
+        <p text-center>Your account is awaiting verification of the system. </p> 
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
+
+<ion-content class="content_verifyaccount pending" *ngIf="infomation.status_verityaccount == 2">
+  <ion-card class="">
+    <ion-row class="step tow" >
+      <ion-col col-12>
+       <h3 text-center>Account verification system</h3>
+       
+      </ion-col>
+      <ion-col col-8 offset-2>
+        <img src="assets/imgs/finish-icon.png">
+
+      </ion-col>
+      <ion-col col-12>
+        <p text-center>Your account is verified. </p> 
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

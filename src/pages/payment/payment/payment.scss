@@ -1,0 +1,197 @@
+page-payment {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 25px;
+	}
+	.content_payment .top{
+		background: url('../assets/imgs/collection_bg.png');
+	    background-size: 100%;
+	    width: 300px;
+	    height: 115px;
+	    margin: 10px auto;
+	    margin-top: 10px;
+	    background-repeat: no-repeat;
+	}
+	.content_payment .center{
+		background: url('../assets/imgs/pay_bg.png');
+	    background-size: 100%;
+	    width: 300px;
+	    height: 115px;
+	    margin: 10px auto;
+	    margin-top: 10px;
+	    background-repeat: no-repeat;
+	}
+	.content_payment .bottom{
+		background: url('../assets/imgs/bill_bg.png');
+	    background-size: 100%;
+	    width: 300px;
+	    height: 115px;
+	    margin: 10px auto;
+	    margin-top: 10px;
+	    background-repeat: no-repeat;
+	}
+	.content_payment h3{
+		line-height: 110px;
+		color: #fff;
+	    font-size: 14px;
+    	font-weight: 400;
+	} 
+	.content_transaction ion-row{
+		background: #fff;
+	}
+	.content_transaction ion-row ion-col{
+		padding: 12px 0;
+	    font-size: 13px;
+	    color: #333333;
+	} 
+
+	.content_transaction ion-row{
+		border-bottom: 1px solid #eee;
+	}
+	.content_transaction ion-row .label-md,.content_transaction ion-row .label-ios {
+	    margin: 1px 8px 1px 0;
+	}
+	.content_transaction ion-row .send{
+		color: #FF5722;
+	}
+	.content_transaction ion-row .receive{
+		color: #4CAF50;
+	}
+	.content_transaction .top_header{
+	    background: #e4e4e4;
+    	padding: 0px;
+	    
+	}
+	.content_transaction .top_header ion-col {
+	    padding: 5px 0;
+	    color: #0a0a0a;
+	}
+	.content_transaction .button_click ion-col img{
+		width: 35px;
+	}
+	.content_transaction .button_click ion-col{
+        padding: 10px 0px;
+	    
+	    border-right: 1px solid #eee;
+	}
+	.content_transaction .button_click ion-col .left{
+		float: left;
+		width: 100%;
+		text-align: center;
+	}
+	.content_transaction .button_click ion-col .right{
+		float: left;
+		width: 100%;
+		text-align: center;
+	}
+	.content_transaction .button_click ion-col .right p{
+		margin: 0px;
+		font-size: 15px;
+    	color: #FF5722;
+	}
+}
+.prompt_alert_customer.customs .alert-message{
+	padding: 0px;
+	background: #fff;
+}
+.prompt_alert_customer.customs .alert-wrapper .alert-head {
+    background: #fff;
+   
+}
+.prompt_alert_customer.customs .alert-input-group {
+    background: #ffffff;
+}
+
+.prompt_alert_customer.customs .top h3{
+	width: 100%;
+	border-top: 1px solid #eee; 
+	margin-top: 0px;
+	padding-top: 15px;
+	margin-bottom: 10px;
+}
+.prompt_alert_customer.customs  .top p{
+	border-bottom: 1px solid #eee;
+	margin-top: 5px;
+    margin-bottom: 0px;
+}
+.prompt_alert_customer.customs .item{
+	padding: 15px 15px;
+	border-bottom: 1px solid #eee;
+}
+.prompt_alert_customer.customs .item .left{
+	float: left;
+	font-size: 10px;
+}
+.prompt_alert_customer.customs .item .right{
+	float: right;
+    color: #3c3a3a;
+    font-size: 10px;
+}
+.prompt_alert_customer.customs .alert-input-wrapper input {
+    background: #cacaca;
+    
+}
+.prompt_alert_customer.customs .alert-button-group{
+	background: #fff;
+	padding: 0px;
+	display: inline;
+}
+
+.prompt_alert_customer.customs .alert-button {
+    width: 50%;
+    margin-bottom: 0px;
+    border: 1px solid #b7b7b7;
+    border-radius: 0px;
+}
+
+.prompt_alert_customer.customs .alert-button:first-child {
+    
+    background: #d6d6d6;
+    
+    float: left;
+}
+.prompt_alert_customer.customs .alert-title {
+   
+    color: #FF5722;
+}

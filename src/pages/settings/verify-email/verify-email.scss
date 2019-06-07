@@ -1,0 +1,141 @@
+page-verify-email {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #FFFFFF !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 20px;
+	}
+
+	ion-card{
+	    margin: 0px !important;
+    	
+    	width: calc(100% - 0px) !important;
+	}
+	.contents .button_customer  button{
+		background: #fff;
+	    height: 35px;
+	    line-height: 35px;
+	    font-weight: 400;
+	    color: #FF5722;
+	    width: 80%;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	    border: 1px solid #FF5722;
+	    box-shadow: none;
+	    border-radius: 15px;
+	}
+	.item-md,
+	.item-ios {
+		background: transparent;
+		
+		
+		margin-bottom: 15px;
+	}
+	.contents .button-md:hover:not(.disable-hover),.contents .button-ios:hover:not(.disable-hover),{
+		background: transparent;
+	}
+	.contend_send label{
+	    margin-top: 30px !important;
+	    float: left;
+	    padding-left: 20px;
+	    color: #676464;
+	    margin-bottom: 5px;
+	    font-size: 12px;
+	}
+	.contend_send ion-input{
+		border: 1px solid #eee;
+    	
+    	font-size: 12px;
+	    background: #efefef;
+	}
+	.step_2{
+		padding: 20px;
+	}
+	.step_2 .input_code{
+		border: 1px solid #6d6d6d !important;
+		float: left;
+    	margin-right: 2%;
+    	width: 15%;
+    	color: #FF5722;
+    	
+	}
+	.step_2 p,.step_3 p{
+		text-align: center;
+		color: #383636;
+	    font-size: 12px;
+	    margin-bottom: 30px;
+	}
+	.step_2 .input_code input{
+		text-align: center;
+	}
+	.step_2 .input_code:last-child{
+		margin-right: 0;
+	}
+	.step_2 .button,.step_3 .button{
+		width: 100%;
+	    float: left;
+	    margin-top: 20px;
+
+	}
+	.contents .step_2 button,.contents .step_3 button{
+		background: #fff !important;
+		line-height: 35px;
+	    height: 35px;
+	    font-weight: 400;
+	    color: #FF5722;
+	    width: 80%;
+	    
+	    margin-top: 15px;
+	    border: 1px solid #FF5722;
+	    margin-left: 10%;
+	    box-shadow: none;
+	    border-radius: 15px;
+	}
+
+	.step_3 .input_password{
+		border: 1px solid #d17530 !important;
+		float: left;
+    	margin-top: 20px;
+    	width: 100%;
+    	
+	}
+}

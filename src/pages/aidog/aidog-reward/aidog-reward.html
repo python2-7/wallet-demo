@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Ai-Bald Eagle Dialing</ion-title>
+    <button (click)="ViewReccord()" ion-button  class="right_heder">
+      <img  src="assets/imgs/dog_open_record.png"  />
+    </button>	
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<ion-card>
+		
+	    <ion-card-content>
+	    	<ion-grid>
+				<ion-row text-center>
+					<ion-col text-center>
+						<h1 class="number_ramdom">{{number_radom}}</h1>
+						
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+	    	<button class="button-dialing start" *ngIf="button == 'start'" ion-button full (click)="StartDialing()">Start</button>
+	    	<button class="button-dialing" *ngIf="button == 'stop'" ion-button full (click)="StopDialing()">Stop</button>
+	    	<button class="button-dialing" *ngIf="button == 'pedding'" ion-button full>Stop</button>
+	    	<p class="count_turn">You have {{number_dialing}} turns, {{number_dialing_pending}} pending</p>
+	    </ion-card-content>
+	</ion-card>
+	<div class="clear_div"></div>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Ai-Bald Eagle dialing record</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="exchange_record">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-list>
+	  	<ion-item *ngFor="let item of history">
+		    <ion-row >
+	          	<ion-col col-2 class="left" text-center>
+	          		<img  class="currency_from" src="assets/imgs/cryptocurrency/ASIC.png" />
+	          	</ion-col>
+	          	<ion-col col-8 class="right">
+	          		<p><span class="date_added" float-left>{{item.date_added}}</span></p>
+	          			
+	          			<p class="detail">Ai-Bald Eagle {{item.package}} {{item.currency}}</p>
+	          	</ion-col>
+	          	<ion-col col-2 class="amount" text-center>
+	          		<span float-right > +{{item.amount_coin}}</span> 
+	          	</ion-col>
+	          
+	        </ion-row>
+		    <!-- <div class="left">
+		    	<p><img  src="assets/imgs/asipay.png" />  <span>+{{item.amount_coin}} ASIC</span></p>
+		    	
+		    </div>
+		    <div class="right">
+		    	<p>{{item.date_added}} 
+		    		
+		    	</p>
+		    	
+		    </div> -->
+	  	</ion-item>
+	  	<p text-center class="data_history" *ngIf="count_history == 0">There is no data</p>
+	  	
+	</ion-list>
+	<ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="count_history > 0">
+	   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+</ion-content>

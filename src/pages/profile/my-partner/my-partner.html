@@ -1,0 +1,45 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	
+    <button (click)="goback()" ion-button class="left_heder" >
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>My Member</ion-title>
+  </ion-navbar>
+  <ion-row class="top_member">
+     <ion-col col-12 text-center>
+        <p>Number of F1: {{count_f1}}</p>
+     </ion-col>
+  </ion-row>
+</ion-header>
+
+
+<ion-content class="content_collect">
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+    	<ion-refresher-content></ion-refresher-content>
+  	</ion-refresher>
+	<ion-card>
+	    <ion-card-content style="padding: 5px;">
+
+	    	<ion-list>
+			  <ion-item *ngFor="let item of history" style="border-bottom: 1px solid #eee;" >
+			    <ion-avatar item-start>
+			      <img src="{{item.img_profile}}">
+			    </ion-avatar> 
+			    <h2 style="font-size: 13px; color: #FF5722;">{{item.email}}</h2>
+			    <p style="color: #989696; font-size: 12px; margin-top: 5px">{{item.creation}}</p>
+			    <span class="foor">{{item.floor}}</span>
+			  </ion-item>
+			</ion-list>
+
+			
+			<p text-center  *ngIf="count_history == 0">No Records</p>
+			<p text-center  *ngIf="history_load_no == true" style="margin-top: 20px;">No Records</p>
+		</ion-card-content>
+	</ion-card>
+	<!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="count_history > 0 && history_load_no == false">
+	   	<ion-infinite-scroll-content></ion-infinite-scroll-content>
+	</ion-infinite-scroll> -->
+</ion-content>

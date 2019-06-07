@@ -1,0 +1,162 @@
+page-add-new-wallet {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 25px;
+	}
+	.content_withdraw form{
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 30px;
+		min-height: 200px;
+	}
+	.list-md .item-block .item-inner,.list-ios .item-block .item-inner{
+		border-bottom: none;
+	}
+	.content_withdraw .item-input ion-input{
+	    
+	}
+	.item-md.item-block .item-inner,.item-ios.item-block .item-inner{
+		padding-right: 16px;
+	}
+	.text-input-md,.text-input-ios{
+		margin: 15px 8px;
+		font-size: 12px;
+		padding-left: 0px;
+	}
+	
+	.content_withdraw .fee{
+		font-size: 12px;
+    	padding-left: 22px;
+	}
+	.content_withdraw .button_customer button{
+		background: #fff;
+	    height: 35px;
+	    line-height: 35px;
+	    font-weight: 400;
+	    color: #FF5722;
+	    width: 80%;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	    border: 1px solid #FF5722;
+	    border-radius: 15px;
+	    box-shadow: none;
+	}
+	.content_withdraw .button_customer button:hover{
+		background: transparent !important;
+	}
+	.list-md .item-input:last-child,.list-ios .item-input:last-child{
+		border-bottom: none !important;
+	}
+	.content_withdraw ion-col img{
+		position: absolute;
+	    right: 30px;
+	    top: 20px;
+	    width: 20px;
+	}
+	.content_withdraw ion-col span.text{
+	    position: absolute;
+	    right: 20px;
+	    top: 19px;
+	    color: #969696;
+	    font-size: 12px;
+	}
+	.form ion-label[fixed] {
+	    
+	    flex: 0 0 48px;
+	    width: 48px;
+	    min-width: 48px;
+	   color: #2b2929;
+	   font-size: 12px;
+       margin: 0px;
+    	margin-left: 10px;
+	}
+	.form ion-label.coin[fixed] {
+	    
+	    flex: 0 0 4%;
+	    width: 40%;
+	    min-width: 40%;
+	   
+	}
+	.form .input-wrapper{
+		border: 1px solid #efefef;
+    	background: #f7f7f7;
+	}
+	.form .item-input .label-md,.form .item-input .label-ios{
+		color: #2b2929;
+    	font-size: 12px;
+	}
+	.form .item-inner{
+		padding-right: 0px;
+	}
+	.form ion-select{
+		width: 60%;
+		max-width: 60%;
+	    font-size: 14px;
+	}
+}
+.select-customer .action-sheet-title{
+	height: 40px;
+	border-bottom:  1px solid #e4e4e4;
+}
+.select-customer .action-sheet-group{
+	border-radius: 10px;
+    
+    width: 85%;
+    margin: 5px auto;
+}
+.select-customer .action-sheet-button{
+	border-bottom:  1px solid #e4e4e4;
+	font-size: 12px;
+    color: #03A9F4;
+    text-align: center;
+}
+.select-customer .action-sheet-group .button-inner{
+	justify-content: center;
+}
+.select-customer .action-sheet-selected{
+	font-weight: 400;
+}
+.select-customer .action-sheet-group:last-child{
+	padding-bottom: 0px;
+}

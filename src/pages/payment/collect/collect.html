@@ -1,0 +1,96 @@
+
+<ion-header>
+
+  <ion-navbar>
+  	<button (click)="goback_()" ion-button class="left_heder" *ngIf="viewspecyfy == true">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <button (click)="goback()" ion-button class="left_heder" *ngIf="viewspecyfy == false">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Collect</ion-title>
+    <button ion-button  class="right_heder" (click)="Screenshot()">
+      <img  src="assets/imgs/share.png"  />
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_collect">
+	<ion-row *ngIf="viewspecyfy == false"> 
+		<ion-col col-12 text-center>
+			<div class="top">
+				<img  src="assets/imgs/asipay.png"  />
+				<h3>{{currency}} - Wallet</h3>
+				<p>{{address}}</p>
+			</div>
+			<div class="border-center">
+
+			</div>
+			<div class="center"  text-center>
+				<img src="https://chart.googleapis.com/chart?chs=250x250&cht=qr&action=payment&chl={{code}}" />
+			</div>
+			<div class="bottom"  text-center>
+				<div class="left">
+					<ion-select  [(ngModel)]="form.currency" [selectOptions]="selectOptions"  (ionChange)="onChangeSelect($event)" class="currency" interface="action-sheet" name="currency" >
+				      <ion-option value="ASIC" disabled="disabled" >ASIC</ion-option>
+				      <ion-option value="BTC" selected="true">BTC</ion-option>
+				      <ion-option value="ETH">ETH</ion-option>
+				      <ion-option value="LTC" >LTC</ion-option>
+					  <ion-option value="DASH" >DASH</ion-option>  
+					  <ion-option value="EOS" >EOS</ion-option>  
+					  <ion-option value="XRP" >XRP</ion-option>  
+					  <ion-option value="USDT" >USDT</ion-option>  
+				    </ion-select>
+					<span class="change_coin">Change Coin</span>
+				</div>
+				<div class="right" (click)="SpecyfyAmount()">
+					Specyfy an amount
+				</div>
+			</div>
+		</ion-col>
+		
+	</ion-row>
+
+	<ion-row class="bottom_customer" *ngIf="viewspecyfy == true">
+		<h3>{{currency}} (USD) {{price_coin}}</h3>
+		<ion-col col-6 text-center>
+			<span class="border_input">USD</span>
+		</ion-col>
+		<ion-col col-6 text-center>
+			<ion-input class="input" placeholder="0.0" [(ngModel)]="form.amount_usd"  name="amount_usd" type="number" required (keyup)='onChangeInputUSD($event.target.value)'></ion-input>
+		</ion-col>
+		<ion-col col-12 text-center style="padding: 0px !important;">
+			<img src="assets/imgs/change.png" />
+		</ion-col>
+		<ion-col col-6 text-center>
+			<ion-select [(ngModel)]="form.currency" [selectOptions]="selectOptions"  (ionChange)="onChangeSelect($event)" class="selecte_coinss" interface="action-sheet" name="currency" >
+		      <ion-option value="ASIC" disabled="disabled" >ASIC</ion-option>
+		      <ion-option value="BTC" selected="true">BTC</ion-option>
+		      <ion-option value="ETH">ETH</ion-option>
+		      <ion-option value="LTC" >LTC</ion-option>
+			  <ion-option value="DASH" >DASH</ion-option>  
+			  <ion-option value="EOS" >EOS</ion-option>  
+			  <ion-option value="XRP" >XRP</ion-option>  
+			  <ion-option value="USDT" >USDT</ion-option>  
+		    </ion-select>
+		</ion-col>
+		<ion-col col-6 text-center>
+			<ion-input class="input" placeholder="0.0" [(ngModel)]="form.amount_currency"  name="amount_currency" type="number" (keyup)='onChangeInputCOIN($event.target.value)' required></ion-input>
+		</ion-col>
+		<ion-col col-12 text-center style="padding: 0px !important;">
+			
+			<div class="bottom"  text-center>
+
+				
+				<div class="right" (click)="Confirmreceipt()">
+					Confirm receipt
+				</div>
+			</div>
+		</ion-col>
+		
+	</ion-row>
+
+
+</ion-content>

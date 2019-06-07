@@ -1,0 +1,68 @@
+page-transanctions {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #dcdcdc !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 20px;
+	}
+	.content_transaction ion-row{
+		background: #fff;
+	}
+	.content_transaction ion-row ion-col{
+		padding: 12px 0;
+		font-size: 12px;
+	} 
+
+	.content_transaction ion-row{
+		border-bottom: 1px solid #eee;
+	}
+	.content_transaction ion-row .label-md,.content_transaction ion-row .label-ios {
+	    margin: 1px 8px 1px 0;
+	}
+	.content_transaction ion-row .send{
+		color: #FF5722;
+	}
+	.content_transaction ion-row .receive{
+		color: #4CAF50;
+	}
+	
+}

@@ -1,0 +1,134 @@
+page-detail-contactus {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #ffffff !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 25px;
+	}
+	.content_withdraw form{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.list-md .item-block .item-inner,.list-ios .item-block .item-inner{
+		border-bottom: none;
+	}
+	.content_withdraw .input-wrapper{
+	    border: 1px solid #efefef;
+	}
+	.item-md.item-block .item-inner,.item-ios.item-block .item-inner{
+		padding-right: 16px;
+	}
+	.text-input-md,.text-input-ios{
+		margin: 15px 8px;
+		font-size: 12px;
+	}
+	
+	.list-md .item-input:last-child,.list-ios .item-input:last-child{
+		border-bottom: none !important;
+	}
+	.content_support h1{
+	    text-align: center;
+	    font-size: 14px;
+	    margin-bottom: 30px;
+	    margin-top: 5px !important;
+	    color: #FF5722;
+	}
+
+	.img_profile_support{
+		width: 45px;
+	    border-radius: 50%;
+	    height: 45px;
+	    margin: 0 auto;
+	}
+	.message_support{
+		
+		color: #353535;
+	}
+	.border-bottom{
+		border-bottom: 1px solid #f5f5f5;
+	}
+	
+	.date_support.right{
+		right: 0;
+	}
+	.date_support.left{
+		left: 0;
+	}
+	.content_support form{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.content_support button{
+		background: #fff;
+	    height: 35px;
+	    font-weight: 400;
+	    color: #FF5722;
+	    width: 80%;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	    border: 1px solid #FF5722;
+	    
+	    line-height: 35px;
+        box-shadow: none;
+        border-radius: 15px;
+	}
+	.content_support .input-wrapper{
+	    border: 1px solid #efefef;
+	}
+	.message_support p{
+		font-size: 12px;
+		margin-bottom: 0px;
+		margin-top: 5px;
+	}
+	ion-card-content{
+		padding: 0px !important;
+	}
+	.message_admin{
+		color: #4CAF50;
+	}
+	.date_support{
+        color: #888787;
+	    font-size: 10px !important;
+	    position: absolute;
+	    bottom: 0;
+	}
+}

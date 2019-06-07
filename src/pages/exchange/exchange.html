@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-navbar>
+  	<button (click)="goback()" ion-button class="left_heder">
+      <img  src="assets/imgs/back.png"  />
+    </button>
+    <ion-title>Exchange </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content_exchange">
+	<ion-row class="top">
+		<ion-col col-5  text-center class="left">
+			<label>Exchange</label>
+			<ion-select [(ngModel)]="form.from_currency" [selectOptions]="selectOptions"  (ionChange)="onChangeSelectFrom($event)" class="selecte_coin" interface="action-sheet" name="currency" >
+		      
+		      <ion-option value="BTC" selected="true">BTC</ion-option>
+		      <ion-option value="ETH">ETH</ion-option>
+		      <ion-option value="LTC" >LTC</ion-option>
+			  <ion-option value="DASH" >DASH</ion-option>  
+			  
+			  <ion-option value="XRP" >XRP</ion-option>  
+			  <ion-option value="USDT" >USDT</ion-option>  
+		    </ion-select>
+			<p>{{from_balance}}</p>
+		</ion-col>
+		<ion-col col-2 text-center class="exchange">
+      		<img  src="assets/imgs/exchange.png" />
+      	</ion-col>
+		<ion-col col-5 text-center class="right">
+			<label>Receive</label>
+			<ion-select [(ngModel)]="form.to_currency" [selectOptions]="selectOptions" (ionChange)="onChangeSelectTo($event)" class="selecte_coin" interface="action-sheet" name="currency" >
+		     
+		      <ion-option value="BTC" selected="true">BTC</ion-option>
+		      <ion-option value="ETH">ETH</ion-option>
+		      <ion-option value="LTC" >LTC</ion-option>
+			  <ion-option value="DASH" >DASH</ion-option>  
+			  
+			  <ion-option value="XRP" >XRP</ion-option>  
+			  <ion-option value="USDT" >USDT</ion-option>  
+		    </ion-select>
+			<p>{{to_balance}}</p>
+		</ion-col>
+	</ion-row>
+	<!-- <ion-row class="center">
+		<ion-col col-12 >
+			<p float-left>Service charge 0.25%</p>
+			<p float-right>{{to_currency}}($) {{price_to}}</p>
+		</ion-col>
+		<ion-col col-12 >
+			<p float-left>Maximum convertibility {{from_balance}}</p>
+			<p float-right>{{from_currency}}($) {{price_from}}</p>
+		</ion-col>
+	</ion-row> -->
+	<ion-row class="amount_currency">
+		<ion-col col-12 >
+			<h3 class="string_amount" text-center>{{((string_amount)*1).toFixed(8)}} {{from_currency}}</h3>
+			<p text-center>{{((string_estimate)*1).toFixed(8)}} {{to_currency}}</p>
+		</ion-col>
+	</ion-row>
+	<ion-row class="keyboard">
+		<ion-col col-12 >
+			<ion-row>
+				<ion-col (click)="Clicknumber(1)">
+					1
+				</ion-col>
+				<ion-col (click)="Clicknumber(2)">
+					2
+				</ion-col>
+				<ion-col (click)="Clicknumber(3)">
+					3
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col (click)="Clicknumber(4)">
+					4
+				</ion-col>
+				<ion-col (click)="Clicknumber(5)"l>
+					5
+				</ion-col>
+				<ion-col (click)="Clicknumber(6)">
+					6
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col (click)="Clicknumber(7)">
+					7
+				</ion-col>
+				<ion-col (click)="Clicknumber(8)">
+					8
+				</ion-col>
+				<ion-col (click)="Clicknumber(9)">
+					9
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col (click)="Clicknumber('.')">
+					.
+				</ion-col>
+				<ion-col (click)="Clicknumber(0)">
+					0
+				</ion-col>
+				<ion-col (click)="Blackspace()">
+					<ion-icon name="backspace"></ion-icon>
+				</ion-col>
+			</ion-row>
+		</ion-col>
+	</ion-row>
+	<!-- <ion-row class="form">
+		<form  (ngSubmit)="SubmitForm()">
+   			<ion-col col-12 >
+				<ion-list>
+					<ion-item>
+					    <ion-label fixed>Enter Amount:</ion-label>
+					    <ion-input  class="input" (keyup)='onChangeInput($event.target.value)' [(ngModel)]="form.amount"  name="amount" type="number" required></ion-input>
+				  	</ion-item>
+				 	
+				 	<ion-item>
+					    <ion-label fixed>Amount of currency:</ion-label>
+					    <ion-input class="input" [(ngModel)]="form.estimate"  name="estimate" type="text" required readonly="true"></ion-input>
+				  	</ion-item>
+
+				  	<ion-item class="bottom">
+					    <ion-label fixed>Level II Password:</ion-label>
+					    <ion-input class="input" [(ngModel)]="form.password_transaction"  name="password_transaction" type="password" placeholder="Transaction Password" required></ion-input>
+				  	</ion-item>
+				</ion-list>
+			</ion-col>
+			<p class="fee">Miners Free: 0.001 ASIC</p>
+			<ion-row lass="customer_width">
+			 	<ion-col>
+			    	<button ion-button full type="submit" block>Exchange</button>
+			 	</ion-col>
+			</ion-row>
+			
+		</form>
+	</ion-row> -->
+	<button class="button-customer" (click)="ExchangeSubmitButon()" ion-button full block>Exchange</button>
+</ion-content>

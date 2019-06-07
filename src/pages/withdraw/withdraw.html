@@ -1,0 +1,69 @@
+
+<ion-header>
+	<ion-navbar>
+	  	<button (click)="goback()" ion-button class="left_heder">
+	      <img  src="assets/imgs/back.png"  />
+	    </button>
+	    <ion-title>Withdraw {{currency}}</ion-title>
+	    <button (click)="scanCode()" ion-button  class="right_heder">
+	      <img  src="assets/imgs/qrcode_white_icon.png"  />
+	    </button>
+	  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="content_withdraw">
+	<ion-row class="form">
+		<form  (ngSubmit)="SubmitForm()">
+   			
+			<ion-list>
+				<ion-row class="top_withdraw">
+					<ion-col style="position: relative;">
+						<p text-center>Available Balance </p>
+						<h3 text-center>{{balance}} {{currency}}</h3>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col style="position: relative;">
+						<label class="label_text">Withdraw Amount </label>
+			 			<ion-item class="amount">
+				    		
+				    		<ion-input class="input" placeholder="" [(ngModel)]="form.amount"  name="amount" type="number" required></ion-input>
+				    		
+			  			</ion-item>
+			  			<span class="text" (click)="MaxAmount()">MAX</span>
+			  		</ion-col>
+			  	</ion-row>
+			  	<!-- <p class="fee">Fee: 0.001 ASIC</p> -->
+				<ion-row>
+					<ion-col style="position: relative;">
+						<ion-item>
+						    
+						    <ion-input  class="input" [(ngModel)]="form.address" placeholder="Wallet address" name="address" type="text" required></ion-input>
+					  	</ion-item>
+					  	<img (click)="ViewContact()" src="assets/imgs/add_contact.png" />
+					</ion-col>
+				</ion-row>
+			 	
+			  	<ion-row>
+					<ion-col style="position: relative;">
+					  	<ion-item class="">
+						   
+						    <ion-input class="input" [(ngModel)]="form.password_transaction"  name="password_transaction" type="password" placeholder="Transaction Password" required></ion-input>
+					  	</ion-item>
+					</ion-col>
+				</ion-row>
+			  	
+			</ion-list>
+			
+
+			<ion-row lass="customer_width">
+			 	<ion-col>
+			    	<button ion-button full type="submit" block>Withdraw</button>
+			 	</ion-col>
+			</ion-row>
+			
+		</form>
+	</ion-row>
+</ion-content>

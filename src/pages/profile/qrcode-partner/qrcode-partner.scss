@@ -1,0 +1,207 @@
+page-qrcode-partner {
+	.toolbar-background{
+		background: linear-gradient(to top, #160c56 0%, #052238 100%);
+		color: #fff;
+	}
+	.toolbar-title {
+	    font-size: 14px;
+	    font-weight: 400;
+	    color: #ffffff;
+	    text-align: center;
+	    line-height: 35px;
+	}
+	
+	.toolbar .left_heder{
+		position: absolute;
+	    left: 0px;
+	    top: 3px;
+	    z-index: 99999;
+        width: 45px;
+	}
+	.toolbar .right_heder{
+		position: absolute;
+	    right: 10px;
+	    top: 5px;
+	    z-index: 99999;
+	    width: 30px;
+	}
+	.scroll-content{
+		background: #FFFFFF !important;
+		margin-bottom: 0px !important;
+	}
+	.toolbar .right_heder,.toolbar .left_heder{
+		background: none;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+	}
+	.toolbar .right_heder:hover,.toolbar .left_heder:hover{
+		background: none;
+	}
+	.toolbar .left_heder img{
+		width: 10px;
+	}
+	.toolbar .right_heder img{
+		width: 20px;
+	}
+
+	.content_collect ion-row{
+		width: 80%;
+		margin: 30px auto;
+		
+    	border-radius: 5px;
+	}
+	.content_collect ion-row ion-col{
+		padding: 0px;
+	}
+	.content_collect .top img{
+	    width: 45px;
+	    margin-top: -28px;
+	    background: #2a2a52;
+	    border-radius: 50%;
+	}
+	.content_collect .top h3{
+		font-size: 12px;
+	    font-weight: 400;
+	    margin-bottom: 0px;
+	}
+	.content_collect .top p{
+		font-size: 12px;
+	}
+	.content_collect .border-center{
+		height: 5px;
+		width: 100%;
+		border-bottom: 1px dotted #403e3e;
+		border-top: 1px dotted #403e3e;
+	}
+	.content_collect .center img{
+	    width: 250px;
+	    
+	}
+	.content_collect .bottom{
+		height: 45px;
+		background: #2a2a52;
+	}
+	.content_collect .bottom .left{
+		width: 50%;
+		float: left;
+		text-align: center;
+		line-height: 45px;
+		border-right: 1px solid #FFF;
+		color: #FFEB3B;
+	}
+	.content_collect .bottom .right{
+		width: 50%;
+		float: left;
+		text-align: center;
+		line-height: 45px;
+		color: #FFEB3B;
+	}
+
+	.content_collect ion-select.currency{
+		height: 40px;
+		opacity: 0;
+		position: relative;
+	    width: 100%;
+    	max-width: 100%;
+	}
+	.content_collect .change_coin{
+	    margin-top: -40px;
+	    float: left;
+	    width: 100%;
+	    text-align: center;
+	}
+	.content_collect div.center{
+        position: relative;
+	    height: 260px;
+	    width: 260px;
+	    background: #fff;
+	    padding-top: 5px;
+	    border-radius: 15px;
+	    margin: 0 auto;
+	}
+	.content_collect .center h3{
+		font-size: 14px;
+		font-weight: 400;
+	    margin-bottom: 0px;
+	}
+	.content_collect .center .logo{
+	    width: 35px;
+	    position: absolute;
+	    top: 110px;
+	    left: 116px;
+	    background: #fff;
+	    border-radius: 50%;
+	    padding: 5px;
+	}
+	.bottom_customer h3{
+		width: 100%;
+		float: left;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 400;
+	}
+	.bottom_customer ion-col{
+		padding: 10px !important;
+	}
+	.bottom_customer .border_input{
+	    border: 1px solid #bbbaba;
+	    text-align: center;
+	    padding: 13px 10px;
+	    width: 100%;
+	    float: left;
+	    border-radius: 5px;
+	}
+	.bottom_customer ion-input{
+		border-radius: 5px;
+		border: 1px solid #bbbaba;
+		
+	}
+	.bottom_customer ion-input input{
+		text-align: center;
+	}
+	.bottom_customer img{
+		width: 15px;
+	}
+	.bottom_customer .selecte_coinss{
+		max-width: 100%;
+		width: 100%;
+		border-radius: 5px;
+		border: 1px solid #bbbaba;
+		text-align: center;
+		padding: 12px 20px;
+	}
+	.bottom_customer .right{
+		width: 100% !important;  
+		color: #fff !important;
+		text-align: center;
+	}
+	.bottom_customer .bottom{
+		background: #060606;
+		margin-top: 15px;
+	}
+	p.code{
+		
+		font-size: 12px;
+	    color: #FF5722;
+	    margin-top: -10px;
+	}
+	.content_collect  button{
+		background: #fff !important;
+	    height: 35px;
+	    font-weight: 400;
+	    color: #FF5722;
+	    width: 80%;
+	    margin: 0 auto;
+	    margin-top: 15px;
+	    border: 1px solid #FF5722;
+	    
+	    line-height: 35px;
+        box-shadow: none;
+        border-radius: 15px;
+	}
+	.content_collect  button ion-icon{
+		margin-right: 6px;
+		margin-top: -3px;
+	}
+}
